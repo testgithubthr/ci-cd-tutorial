@@ -1,0 +1,12 @@
+<aura:component implements="c:LI_Eg48_InterfaceWithEvent">
+    <c:LC_Eg48_3_InterfaceWithEvent />
+    
+     <aura:attribute name="en" type="string" />
+    
+    <aura:handler name="InterfaceEvent" event="c:LE_Eg48_InterfaceWithEvent" action="{!c.show}" />
+    
+    <lightning:card title="Component 2 - Only Handle" >
+		The Employee name is : {!v.en}    
+    </lightning:card>
+    
+</aura:component>

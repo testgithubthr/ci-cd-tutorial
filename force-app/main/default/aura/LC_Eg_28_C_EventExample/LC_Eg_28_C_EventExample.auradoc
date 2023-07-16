@@ -1,0 +1,139 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        Event ::
+        ========
+        		A notification by the browser, Component or application regarding an action.
+        
+        	01. Browser Event(Client Side event) :: Events handled by browser Eg: onChange , onFocus, onBlur
+        
+        	02. System Event : Event handled by lightning platform.
+        
+        		There are two types of events in the framework:
+        
+        		Component events :
+        							are handled by the component itself or a component that instantiate or contain the component.
+        
+        		Application events :
+        							are handled by all componentsthat arre listening to the event. this events are essentially
+        							a traditional publish-subscribe model.
+        
+        							Application events follow a traditional publish-Subscribe model.An application event fired
+        							from an instance of an component . all components that provide a handler for the event are 
+        							notified.
+        		
+        		Component Event :
+        						A component event is fired from an instance of a component event can be handled by the component
+        						that fire the event or by a component in the containment hierarchy that receive the events.
+        
+        			1. Component Event Propagation
+        			2. Create custom component events
+        			3. fire component events
+        			4. Handling Component events
+        
+        
+        		Note :: Child to Grand_Parent , Lower to up , Bottom to Top it is called bubbling.
+        				
+        				where ever we are going to register the event , from that component we can call grand parent ,
+        				Not below , not left-right also only up stage.
+        
+        				1. Create a Event
+        				2. Register the event --- where we want to call
+        				3. fire the event     --- from where we can control the parent
+        				4. Handled the event  --- Execute parent component controller.
+        	
+        		Note : Register and fire the event, Bothe activity can happen on same component.
+        
+        		Create  Custom Component Events ::
+        		----------------------------------
+        
+        			Create a custom component event using aura:event tag in a .evt resource.
+        			
+        			Use type="COMPONENT" in the aura:event tag for the component event.
+        
+        			aura:event type="COMPONENT"
+        			aura:attribute name="Message" type="string"
+        			/aura:event
+        
+        		Fire component Events ::
+        		------------------------
+        
+        			fire a component event to communicate data to another component.
+        
+        			Register the event :
+        			------------------
+        				A component  register that it may fire an event by using aura:registerEvent
+        
+        				aura:registerEvent name="nickName for identification" type="c:eventName which we have created"
+        
+        
+        			Fire the event :
+        			----------------
+        				Use fire() to fire the event from an instance of an component
+        		
+        				var compEvent = cmp.getEvent("nickName for identification");
+        					
+        				compEvent.fire();
+        
+        
+        			Handling Component Event ::
+        			---------------------------
+        
+        				A component event can be handeled by the component that fire the event or by a component in the containment
+        				hierarchy that receive the event.
+        
+        				Use aura:handler
+        		
+        
+        
+        					aura:handlername="nickName for identification" event="ns:eventName"
+        
+        					action="{!c.handled Component event}" phase="capture"
+        
+        
+        Note :: While creating a custom event, by default its showing APPLICATION platform.we can change as a COMPONENT always is in caps.
+        
+        
+        Step_1 :     create Event first.
+        
+        Step_2 :     create a Parent Component.
+        
+        Step_3 :	 Create a Child Component.(Child will fire event , Parent will react)
+        			 
+        			 Here, where ever you want to fire we have to register the event
+        			 Here, we are fired the event also
+        			
+        			 aura:registerEvent name="First" type="c:LE_Eg_28_EventExample"
+        				
+        								Name= nick Name of the event
+        						
+        								type= Event name which we have created.
+        
+        
+        			There is a button means there is a controller.
+        			fetch the event (var evt = component.getEvent("nick name of the event which we have given"))--- No v.
+        								 evt.fire();
+        
+        Step_4 : Who can handle this event. Parent will handle.
+        		
+        		How it will became parent, when ever i call child component, then only
+        		Means call child component in parent component
+        			
+        	Note : when ever or who ever you want to handle something, they have to use what aura:handler. 
+					
+        			aura:handler name="First" event="c:LE_Eg_28_EventExample" action="{!showMe}"
+        
+								 name="nick name of the event"---what event you want to handle, it may be more than one event.        
+        						 
+        						 event ="event name"
+        
+        						 action="{!c.showMe}"   --- when ever child component button will fire, parent action will react.
+        
+        Step_5 : Call the parent component in application, because child comes under parent.
+        
+        
+	</aura:example>
+</aura:documentation>

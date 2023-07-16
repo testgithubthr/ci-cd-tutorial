@@ -1,0 +1,61 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        When you click on component , Its start with Aura Component.
+        
+        Here we are just design it , 
+        
+        Where can i see my Output , In component you dont have an output , There is no way in the component bundled i have an output.	
+        
+        Output can be seen only with the help of Application. As of now all these component has to be part of application.
+        
+        First create a component then create application to run the programme and see the output of the program.
+        
+        Component Has 8 Bundled ::
+        
+        	Component / Application : CMP/APP  Name.cmp/app  Template, Designing UI.
+    
+            Controller : JS  nameController.js  JavaScript , CSC , Logic..
+            
+            Helper 	   : JS  NameHelper.js  JavaScript , CSS , Logic , Common Logic / script  Helper Helps Controller
+            
+            Style      : CSS  Name.css  Style , colour , Design ,Layout.
+            
+            Doc        : AURAr.js DOC   Name.auradoc   Documentation ,Details, Step, explaination , Flow , Description, Definition.
+            
+            Renderer   : JS  NameRendere.js Rerender , refreshing , Reloading , Onloading , (Rarerly Used)
+            
+            Design     : design  Name.design   Designing , Structuring , Layout.
+            
+            SVG (Scalar Vector Grapics)   SVG   Name.svg   Creating Icon , Images (rarerly used)
+        
+        
+        Note :: Both Application and Component has a same bundled except design.
+                Application doesnt have a design where as component has a design, thats the only diffrent.
+        
+        		By Default Component Bundled has Selected.
+        
+        	    unless and untill you deploy component , component doesnt have preview button.But where as when you go to application,
+                There is a preview window.
+        
+        		Whatever the component that i craeted, i have to call that component in the application.
+                we are creating custom component so we will use c:componentName.
+
+				Inside the application its showing one or multiple component.
+        
+        		Can i have multiple component in the one application ?
+        		Yes , That is the purpose.
+        
+        		Can i control those component with logic ?
+        		Yes, That is reason we have a controller.
+        
+				
+			         
+        		
+
+        
+	</aura:example>
+</aura:documentation>

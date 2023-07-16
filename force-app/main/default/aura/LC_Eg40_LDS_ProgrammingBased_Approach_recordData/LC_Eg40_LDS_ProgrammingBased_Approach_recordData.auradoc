@@ -1,0 +1,28 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description::
+        
+        	recordId="{!v.recordId}" 
+                                    Here recordId has taken Dynamically.
+                                    its also come from force:hasRecordId
+        							without using attribute we will get recordId by using force:hasRecordId
+        							force:hasRecordId this will return recordId to the component
+        							
+        	Note::
+        	======
+        
+        	force:recordData 
+                      recordId="{!v.recordId}"
+                      fields="Name,Phone,Industry"
+                      targetFields="{!v.acc}"
+                      targetError="{!v.errMessage}"
+        
+        
+        		whichever the fields are part of recordData only that field will be affected evrywhere,
+        		apart from even i took other field as a input like rating , so it will not work. 
+                      
+        	
+	</aura:example>
+</aura:documentation>

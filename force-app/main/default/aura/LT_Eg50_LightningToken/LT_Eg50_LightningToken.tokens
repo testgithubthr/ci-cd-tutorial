@@ -1,0 +1,6 @@
+<aura:tokens>
+    <aura:token name="TRSBGClour" value="#F231B8" />
+    <aura:token name="TRSBorderColour" value="#0BF115" />
+    <aura:token name="TRSHeaderColour" value="#1477EF" />
+    <aura:token name="TRSBorderStyle" value="#dotted" />
+</aura:tokens>

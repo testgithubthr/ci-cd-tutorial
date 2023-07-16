@@ -1,0 +1,5 @@
+<aura:tokens extends="c:LT_Eg50_LightningToken">
+    <aura:token name="TSRFontStyle" value="italic" />
+    <aura:token name="TSRFontSize" value="30px" />
+    <aura:token name="TSRFontFamily" value="Lucida Console" />
+</aura:tokens>

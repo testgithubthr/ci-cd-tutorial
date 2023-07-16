@@ -1,0 +1,31 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        Button Card ::
+        
+        	-- What is a card ?
+        		card is nothing but pageBlock equivallent to pageBlock in Visualforce you might have learnt pageBlock.
+        		Every card is divided into the multiple areas , you can define length, width , height, where you want to place it.
+        
+        	1. Header
+        	2. Body
+        	3. Footer
+        
+        1. Header ::
+        		Header is divided into two areas
+        		
+        		1. title
+        		2. Header
+        		3. Action : where is button, butoon is an action area.
+        
+        aura:set ::
+        		structure of the card controll by aura:set.
+        		aura:set attribute="actions" inside the aura:set we have button.
+        		Whenever you want to customize the default structure of a card we use aura:set
+        
+        
+	</aura:example>
+</aura:documentation>

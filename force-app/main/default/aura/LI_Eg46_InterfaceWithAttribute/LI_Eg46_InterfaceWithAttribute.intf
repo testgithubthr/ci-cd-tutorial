@@ -1,0 +1,15 @@
+<aura:interface description="Interface template with Two Attribute">
+	<aura:attribute name="empname" type="String" />
+    <aura:attribute name="age" type="Integer" default="32" />
+    <aura:attribute name="Phone" type="String" />
+    <aura:attribute name="DOB" type="Date" />
+    <aura:attribute name="email" type="String" />
+</aura:interface>
+
+
+
+<!-- Always Interface is Aura:interface.  -->
+<!-- When we implements Interface here Automatically all Interface Attribute will call Here  -->
+<!--  Same attribute refer in two component -->
+<!--  Interface define a component shape by defining attribute, events or Methods that any 
+	  Implementing component contain -->

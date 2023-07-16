@@ -1,0 +1,3 @@
+<aura:interface description="Interface template with Events">
+    <aura:registerEvent name="InterfaceEvent" type="c:LE_Eg48_InterfaceWithEvent" />
+</aura:interface>

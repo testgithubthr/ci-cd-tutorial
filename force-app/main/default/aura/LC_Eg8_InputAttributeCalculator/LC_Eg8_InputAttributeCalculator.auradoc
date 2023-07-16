@@ -1,0 +1,18 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        Here, we are going to call the data(attribute) from component to controller.
+        whenever a call a value from component to controller we need to define var a = component.get("v.aval");
+        
+        FLOW ::
+        		All the input is link to the whole data using attribute.(we are inserting the data through input)
+        		Then we hold the whole data through attribute.
+        		using component.get("v.aval"), we got the data inside the controller.
+        		we are performing the logic.
+        		Then sending the data back to the component by using component.set("v.result",r)
+        	
+	</aura:example>
+</aura:documentation>

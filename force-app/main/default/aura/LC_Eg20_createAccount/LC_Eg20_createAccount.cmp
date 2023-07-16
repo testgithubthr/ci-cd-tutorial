@@ -1,0 +1,3 @@
+<aura:component controller="AC_Eg20_createAccount">
+    <lightning:button label="Create Acc" onclick="{!c.callme}"/>
+</aura:component>

@@ -1,0 +1,10 @@
+<aura:component >
+    <aura:registerEvent name="Tushap" type="c:LE_Eg32_ApplicationEvent" />
+    
+    <lightning:card title="Child_1 (P1C1)" >
+        <lightning:button label="Submit" onclick="{!c.callme}"/>
+        
+        <c:LC_Eg32_P1C1G1_ApplicationEvent /> 
+        
+    </lightning:card>
+</aura:component>

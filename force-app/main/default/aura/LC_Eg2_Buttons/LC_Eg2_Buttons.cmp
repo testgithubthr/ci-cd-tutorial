@@ -1,0 +1,10 @@
+<aura:component >
+    <lightning:Button label="Button_1"/>
+    <lightning:Button label="Button_2" variant="Base"/>
+    <lightning:Button label="Button_3" variant="Brand"/>
+    <lightning:Button label="Button_4" variant="Destructive"/>
+    <lightning:Button label="Button_5" variant="Destructive Text"/>
+    <lightning:Button label="Button_6" variant="Success"/>
+    <lightning:Button label="Button_7" variant="Inverse"/>
+    <lightning:Button label="Button_8" variant="neutral"/>
+</aura:component>

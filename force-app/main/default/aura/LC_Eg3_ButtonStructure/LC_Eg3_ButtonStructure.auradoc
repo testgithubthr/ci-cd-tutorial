@@ -1,0 +1,48 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        GoTo -- Google--- Lightning component reference library 
+        	
+        	under Aura -- expand Library...goTo -- category --- choose utility
+        
+        
+        +Follow Button Follow button associate with + sign (icon)
+        All these design are precreated where in lightning design system.(search on google : Salesforce lightning design system)
+        click on Icon 
+        Add(+) icon comes under utility Icons(iconName="Utility:add")
+         
+        Note :: if you want to 3 button together means we have to touched to each other.we  option is called lightning : buttonGroup
+        
+        		Under lightning Group : we can group button using lightnig : buttonGroup Command.
+        
+        Lightning : Button ::
+        
+        					-- To display a button in a lightning page.
+        
+        Attribute : (These are most important attribute)
+        
+        		1. Label : whatever the label we want to display,
+        
+        		2. IconName : if you want to put any type of Icon.(iconName="Utility: IconName")
+        
+       		    3. iconPosition : change the iconPosition(left / right) By default is Left.
+        
+        		4. onClick : I want to call some Java action 
+        					 always onClick written Like this onClick="{!callMe}"
+        					 whenever we click on a button immediately system call a function callMe
+        					 where is callMe, callme Function written in Controller.
+        		
+        		5. Variant : variant is nothing but default button structure.
+        					
+        					Base , Brand , Destructive , Destructive Text , Success , Inverse , Default is nuetral
+        
+        
+        Lightning : buttonGroup ::
+        
+        					-- collection of button together is called lightning : buttonGroup
+        
+	</aura:example>
+</aura:documentation>

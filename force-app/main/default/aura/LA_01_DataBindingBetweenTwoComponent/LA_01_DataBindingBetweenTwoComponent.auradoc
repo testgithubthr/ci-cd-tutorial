@@ -1,0 +1,24 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+		Example Description
+        
+        Data Binding Between Components::
+        =================================
+        
+        	When you add a component in markup, you can use an expression to initialize attribute values in the component based on attribute
+			values of the container component. There are two forms of expression syntax, which exhibit different behaviors for data binding between
+			the components.
+        
+        	This concept is a little tricky, but it will make more sense when we look at an example. Consider a c:parent component that has a
+            parentAttr attribute. c:parent contains a c:child component with a childAttr attribute that’s initialized to the value
+            of the parentAttr attribute. We’re passing the parentAttr attribute value from c:parent into the c:child component,
+            which results in a data binding, also known as a value binding, between the two components.
+        
+        	{!v.parentAttr} is a bound expression. Any change to the value of the childAttr attribute in c:child also affects the
+			parentAttr attribute in c:parent and vice versa.
+        
+        	
+        
+	</aura:example>
+</aura:documentation>

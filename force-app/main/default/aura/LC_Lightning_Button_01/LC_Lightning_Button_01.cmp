@@ -1,0 +1,72 @@
+<aura:component >
+   <!-- <lightning:button label="Refresh" />
+    <lightning:button label="Edit" />
+    <lightning:button label="Save" />
+    
+    
+    <div>
+        <lightning:button variant="brand" 
+                          label="Get Started" 
+                          stretch="true" 
+                          title="get started"
+                          onclick="{! c.handleClick }" />
+    </div>
+    <div>
+        <lightning:button variant="brand" label="Download" iconName="utility:download" iconPosition="right" onclick="{! c.handleClick }" />
+        
+    </div>
+    
+    
+    
+    <lightning:button 
+                      ariaLabel="Close" 
+                      ariaDescribedBy="descriptionClose"
+                      iconName="utility:close"
+                      title="it is a close button"
+                      variant="base"/>
+    
+    <div class="descriptionClose">Closing this window resets the form and
+        returns you back to the main page.</div>
+    
+    <div>
+        <lightning:buttonIcon iconName="utility:settings" variant="bare" alternativeText="Settings" iconClass="dark"/>
+        
+    </div>
+    
+    <lightning:buttonIcon 
+                          iconName="utility:settings"
+                          title="Settings"
+                          tooltip="Display your account settings"
+                          alternativeText="Hidden text for assistive technology">
+    </lightning:buttonIcon> 
+    
+    
+    
+    <lightning:buttonGroup>
+        <lightning:button label="Refresh" />
+        <lightning:button label="Edit" />
+        <lightning:button label="Save" />
+    </lightning:buttonGroup>   -->
+    
+    
+    
+    <!-- <aura:attribute name="liked" type="Boolean" default="true"/>
+    
+    <lightning:buttonIconStateful iconName="utility:like" selected="{!v.liked}" variant="Inverse" alternativeText="Liked"  onclick="{! c.handleToggle }"/>
+    
+    -->
+    <aura:attribute name="buttonstate" type="Boolean" default="false"/>
+    <div class="backgroundInverse">
+        <lightning:buttonStateful
+            labelWhenOff="Follow"
+            labelWhenOn="Following"
+            labelWhenHover="Unfollow"
+            iconNameWhenOff="utility:add"
+            iconNameWhenOn="utility:check"
+            iconNameWhenHover="utility:close"
+            variant="inverse"
+            state="{! v.buttonstate }"
+            onclick="{! c.handleClick }"
+        />
+    </div>
+</aura:component>

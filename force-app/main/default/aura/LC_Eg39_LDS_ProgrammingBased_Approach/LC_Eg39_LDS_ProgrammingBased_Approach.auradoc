@@ -1,0 +1,40 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description:
+        
+        	Lightning Data Service :Prgramme Based approach.
+        	=================================================
+        
+        	controlling of a salesforce Data using client side controller is called LDS Programming Approach.
+        	
+        force:recordData :
+        ==================
+        
+        	A force:recordData component define the parameters for accessing, modifying or creating a record using lightning Data service
+        	
+        	This component doesnt support all salesforce standard objects. for example The event and Task objects are not supported
+        
+        	force:recordData
+        					aura:id="recordLoader"
+        					recordId="{!v.recordId}"
+        					fields="Name,Description,Phone,Industry"
+        					targetFields="{!v.accountRecord}"
+        					targetError="{!v.recordLoadError}"
+        
+        Attributes are required ::
+        
+        	1.recordId
+        	2.targetField
+        	3.targetRecord
+        
+        There are few Method are compulsory ::
+        ========================================
+        
+        	1.getNewRecord
+ 			2.reloadRecord
+        	3.saveRecord
+        	4.deleteRecord
+	</aura:example>
+</aura:documentation>

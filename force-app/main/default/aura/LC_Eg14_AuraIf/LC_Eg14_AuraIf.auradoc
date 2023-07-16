@@ -1,0 +1,20 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        	
+        	aura:attribute name="flag" type="Boolean" default="false"
+        	When ever we set the flag as false , what will happen , this will not get display on the page.
+        	Result card is not been display unless and untill you go and set the value true.
+        
+        Aura:if ::
+        	Aura:if is used to display or hide its not do a logic in component.
+        	logic always perform in controller.
+        	Aura:if is only show the table or card Display or Hide.
+        	We can use more than one aura:if
+        	There is no concept else, only aura:if.
+        	
+        	
+	</aura:example>
+</aura:documentation>

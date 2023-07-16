@@ -1,0 +1,49 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        Step 1 :: Why the input has been passed to aura attribute and then pass to controller,
+                  In a controller do the lots of calculation and againg pass to attribute then attribute to input.
+        		   why we need this mediator.
+        
+        How to call controller without attribute ?
+        
+        --> We can call with the help of aura Id...
+        
+        Q. cant i directly get Input Data into controller?
+        --> Yes (How can we do that)
+        --> We can do that , concept called as Aura ID and get source.
+        
+        Actually there are three concept, we pull the data from component to controller without aura:attribute.
+        
+        1. Declairing the aura Id(always unique)
+        2. Using getSource function.
+        3. Using Event
+        
+        Declairing aura:Id ::
+        
+        	--> How to pull the data in controller
+        	--> component.find("empName").get("v.value")
+        		--> find what (is nothing but find the aura:id)
+        		--> what get (based on aura id we will pull the associate value)
+        
+        Where will i print this? 
+        console.log (mostly used for your debug)
+        we dont have a debuger
+        lightning component are completely on javaScript.
+        javascript has a interpreter, it doesnt has a compiler.
+        
+		where will i see the data?
+        --> on Preview screen , right click on the browser , click on inspect, click on console ,click on submit
+            then you see the data.
+        
+        
+        
+        
+        
+        
+        
+	</aura:example>
+</aura:documentation>

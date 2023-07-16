@@ -1,0 +1,23 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        lightning:layout
+        	lightning:layoutItem
+        
+        Note :
+        	The whole screen is divided into 12 column.
+        	The whole screen and screen size is max only 12 column.
+        	based on size we can occupying component.like 8+4 , 4+4+4, 2+2+2+2+2+2, not more than 12
+        	The first component size gives 8 and second component size gives 5 , 8+5=13 , so second component
+        	will occupy space on next line.
+        
+        Note :
+        	If you dont use lightning layout multipleRows=True System will take only one Row .
+        	one row consist of 12.
+        
+        	Each item can be card.
+	</aura:example>
+</aura:documentation>

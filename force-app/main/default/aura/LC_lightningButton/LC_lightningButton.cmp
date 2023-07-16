@@ -1,0 +1,74 @@
+<aura:component >
+    <lightning:button label="base" variant="base" title="base Action" onclick="{!c.handleClick}"/>
+    <lightning:button label="neutral" variant="Neutral" title="Neutral Action" onclick="{!c.handleclick}" />
+    <lightning:button label="brand" variant="brand" title="Brand Action" onclick="{!c.handleclick}" />
+    <lightning:button label="brand-outline" variant="brand-outline" title="Brand-outline Action" onclick="{!c.handleclick}"/>
+    <lightning:button label="Destructive" variant="Destructive" title="Destructive Action" onclick="{!c.handleclick}"/>
+    <lightning:button label="destructive-text" variant="Destructive-text" title="Destructive-text Action" onclick="{!c.handleclick}"/>
+    <lightning:button label="Success" variant="success" title="Success Action" onclick="{!c.handleclcik}" />
+    <br/><br/><br/><br/><br/><br/>
+    
+    <lightning:buttonGroup>
+        <lightning:button label="refresh"/>
+        <lightning:button label="Save" />
+        <lightning:button label="Edit" />
+        <lightning:button label="Delete" />
+        <lightning:button label="Update" />
+    </lightning:buttonGroup>
+    
+    <br/><br/><br/><br/><br/><br/>
+    <div>
+        
+        <!-- bare -->
+        <lightning:buttonIcon iconName="utility:settings" variant="bare" onclick="{! c.handleClick }" alternativeText="Settings" title="Settings" />
+        <lightning:buttonIcon iconName="utility:settings" variant="bare" onclick="{! c.handleClick }" disabled="true" alternativeText="Settings (disabled)" title="Settings (disabled)" />
+        
+        <!-- with brand -->
+        <lightning:buttonIcon iconName="utility:settings" variant="brand" alternativeText="Settings" title="Settings" />
+        <lightning:buttonIcon iconName="utility:settings" variant="brand" disabled="true" alternativeText="Settings (disabled)" title="Settings (disabled)" />
+        
+        <!-- with container -->
+        <lightning:buttonIcon iconName="utility:settings" variant="container" alternativeText="Settings" title="Settings" />
+        <lightning:buttonIcon iconName="utility:settings" variant="container" disabled="true" alternativeText="Settings (disabled)" title="Settings (disabled)" />
+        
+        <!-- with border / by default -->
+        <lightning:buttonIcon iconName="utility:settings"  alternativeText="Settings" title="Settings" />
+        <lightning:buttonIcon iconName="utility:settings"  disabled="true" alternativeText="Settings (disabled)" title="Settings (disabled)" />
+        
+        <!-- with border filled -->
+        <lightning:buttonIcon iconName="utility:settings"  variant="border-filled" alternativeText="Settings" title="Settings" />
+        <lightning:buttonIcon iconName="utility:settings"  variant="border-filled" disabled="true" alternativeText="Settings (disabled)" title="Settings (disabled)" />
+        
+        <!-- with icon styling -->
+        <lightning:buttonIcon iconName="utility:settings" variant="bare" alternativeText="Settings" iconClass="dark" title="Settings" />
+        
+    </div>
+    
+    <br/><br/><br/><br/><br/><br/>
+    
+    <aura:attribute name="liked" default="false" type="Boolean" />
+    <aura:attribute name="answered" default="false" type="Boolean" />
+    
+    <div class="slds-m-around_medium">
+        <lightning:buttonIconStateful iconName="utility:like" selected="{! v.liked }" onclick="{! c.handleLikeButtonClick }" alternativeText="Like" />
+    </div>
+    <div class="slds-m-around_medium">
+        <lightning:buttonIconStateful iconName="utility:answer" selected="{! v.answered }" onclick="{! c.handleAnswerButtonClick }" alternativeText="Answer" size="small"/>
+    </div>
+    <!-- disabled -->
+    <div class="slds-m-around_medium">
+        <lightning:buttonIconStateful iconName="utility:like"  alternativeText="Disabled" disabled="true"/>
+    </div>
+    
+    <br/><br/><br/><br/><br/><br/>
+   
+        <div class="slds-p-around_medium container lgc-bg">
+            <lightning:buttonMenu alternativeText="Show menu">
+                <lightning:menuItem value="MenuItemOne" label="Menu Item One" />
+                <lightning:menuItem value="MenuItemTwo" label="Menu Item Two" />
+                <lightning:menuItem value="MenuItemThree" label="Menu Item Three" />
+                <lightning:menuItem value="MenuItemFour" label="Menu Item Four" />
+            </lightning:buttonMenu>
+        </div>
+    
+</aura:component>

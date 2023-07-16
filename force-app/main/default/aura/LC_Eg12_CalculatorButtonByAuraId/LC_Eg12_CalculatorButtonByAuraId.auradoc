@@ -1,0 +1,34 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        event.getSource();
+        --> where the Event has occured.
+        
+        var evt = event.getSource();  it will called function is called getSource(where the event happen)
+        var aid = evt.getLocalId(); after find the source of event capture the localId.
+        
+        Based on the localId we will do a lots of calulation.
+        
+        There are two type of ID
+        	1 LocalId.  --> LocalId are Id which are specified to your component.
+        				--> same Id we can use in disffrent component.
+        	2 GlobalId  --> GlobalId are to your nameSpace to your project.
+        				--> its a Unique ID
+        
+        Step_1
+        	
+        	--> var evt = event.getSource();  it will called function is called getSource(where the event happen)
+        
+        Step_2
+        
+        	--> var aid = evt.getLocalId(); after find the source of event capture the localId.
+        
+        Step_3
+        
+        	--> Based on the LocalId we will do calculation.
+        
+	</aura:example>
+</aura:documentation>

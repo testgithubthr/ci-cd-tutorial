@@ -1,0 +1,6 @@
+<aura:component implements="c:LI_Eg48_InterfaceWithEvent">
+    
+    <aura:handler name="InterfaceEvent" event="c:LE_Eg48_InterfaceWithEvent" action="{!c.show}" />
+    
+    <lightning:button label="submit" onclick="{!c.callme}"/>
+</aura:component>

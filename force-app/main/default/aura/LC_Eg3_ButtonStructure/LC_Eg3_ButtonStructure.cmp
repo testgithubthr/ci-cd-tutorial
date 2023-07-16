@@ -1,0 +1,10 @@
+<aura:component >
+    <lightning:button label="Follow" iconName="utility:add" />
+    <lightning:buttonGroup>
+    	
+        <lightning:button label="New Contact" title="Click here to create a new contact" />
+		<lightning:button label="New Case" />
+		<lightning:button label="New Note" />
+        
+    </lightning:buttonGroup>
+</aura:component>

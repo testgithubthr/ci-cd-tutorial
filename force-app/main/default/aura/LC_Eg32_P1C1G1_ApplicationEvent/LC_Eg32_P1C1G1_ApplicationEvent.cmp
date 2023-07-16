@@ -1,0 +1,9 @@
+<aura:component >
+	<aura:attribute name="msg" type="String" />
+    <aura:handler event="c:LE_Eg32_ApplicationEvent" action="{!c.showmep1c1g1}"/>
+    
+    <lightning:card title="Grand_Child_1 (P1C1G1)" >
+    	
+        Grand_Child_P1C1G1 : {!v.msg} 
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,95 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        Apex  Class ::
+        ==============
+        public static string createAccount(string name,string rating,string phone,string Industry)
+        
+        Why all are string , not a integer ,Decimal
+        
+        Because any communication between lightning and apex is through JSON , JSON is String, Text....
+        
+        
+        public static string createAccount(string name,string rating,string phone,string Industry)
+        
+        My work is only pass the data to this method.
+        Data come from lightning then pass to this method.
+        server side controller do the remaing thing,after doing the reamaing thing, it will give me response back,
+        in the form of result , in the result my response will stored,whether the account is created or failed.
+        
+        
+        Controller ::
+        =============
+        
+        Step_1.
+        call apex class / server side Method.
+        
+        Step_2.
+        
+        action.setParam({"Name":"Jhon","Rating":"Hot","Phone":"1234567890","Industry":"Banking"});
+        
+        we are hard coding value , always be JSON format , Key-value pair.
+        
+        Step_3.
+        
+        // step3 --> Invoke the method.
+        
+        action.setCallback(this,function(response)
+        
+        	Here response is function name, function name can be anything.
+        
+        	action.setCallback(this,function(response){
+        
+        		all the program write inside within the {-----}.
+        		whenever the invoke the method, method will give you result, it is also give success or failure.
+        		
+        Note : client was able to retrive the data from server or not , those information will stored in response
+        		all the result and everything will be available inside the response.
+        	}
+        	
+        Note : No overloading and no overriding not supported in lightning.
+        
+        
+        There are two types of error ::
+        ==============================
+        
+        1. Server side error --> captured in response means if part in controller response.getState();
+        2. client side error --> captured in enqueue means else part in controller    else if(st == 'Error')
+        
+        
+        Action State ::
+        ===============
+        
+        		Call server side controller action from a client side controller
+        
+        New :
+        			The action was created, but is not in progress yet.
+        
+        Ruunung :
+        
+        			The action is in progress.
+        
+        Success :
+        
+        			The action executed Successfully.
+        
+        Error   :
+        
+        			The server return an error.
+        
+        Incomplete:
+        
+        			The server didn't return a response.
+        
+        Aborted  :
+        
+        			The action was aborted , this action state is deprecated.
+        		
+        		
+        
+        
+	</aura:example>
+</aura:documentation>

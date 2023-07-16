@@ -1,0 +1,25 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        If you not taken type=number then it will take by default text here.
+        
+        Q when to use aura:Id and when to use aura:attribute?
+        
+        aura:attribute  --> whenever we are taking SObject DataType and collection DataType used aura:attribute. 
+        
+        aura:id  --> whenever we are using with premitive DataType used aura:Id (all premitive dataType comes under aura:id)
+        
+        There are four DataType in Salesforce.
+        
+        	1. Primitive dataType   
+        	2. SObject dataType
+        	3. Array and Collection dataType
+        		a. List
+        		b. Set
+        		c. Map
+        	4. enum dataType.
+	</aura:example>
+</aura:documentation>

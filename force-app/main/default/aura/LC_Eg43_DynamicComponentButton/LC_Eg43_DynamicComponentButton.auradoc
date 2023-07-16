@@ -1,0 +1,49 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description :
+        
+        Lightning Dynamic Component:
+        ============================
+        
+        Purpose : when i click on the button, card will be visible.
+        ========= when i created button i want to create another button.
+        		  when i click on button card will be created.
+        
+        	{!v.body} : is a default attribute for any component, we dont need to declair attribute anywhere
+        	
+        creating component during Run Time is called Dynamic Component.
+        
+        The $A.createComponent() and $A.createComponent() methods support both client-side
+        (syncronous) and server-side (Asyncronous) component creation.
+        
+        Syntax :
+        
+        	$A.createComponent(string type, Object Attribute, function callBack)
+        	====================================================================
+        
+        	type - The type of component to create ; eg. "lightning:button"
+        	
+        	attribute - A map of attribute for the component, including the local id (aura:id)
+        
+        	callBack(cmp, status, errorMessage) - The callback to invoke after the component
+        										  is created.
+        
+        
+        	The callBack Has Three parameter:
+        
+        		1. cmp - The component that was created. Thsese enabled you to do something
+        				 with the new component, such as add it to the body of the component
+        				 that ctreate it. if there is an error, cmp is Null.
+        
+        		2. Status - The status of the call. The possible values are SUCCESS, INCOMPLETE
+        					or ERROR , always check the status is SUCCESS before you try to use
+        					the component.
+        
+        		3. errorMessage - The error message if the status is error.
+        
+        
+        	
+	</aura:example>
+</aura:documentation>

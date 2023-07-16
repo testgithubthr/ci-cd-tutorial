@@ -1,0 +1,21 @@
+<aura:component >
+    <aura:attribute name="pri" type="Decimal"/>
+    <aura:attribute name="term" type="Decimal"/>
+    <aura:attribute name="rate" type="Decimal"/>
+    <aura:attribute name="res" type="Decimal"/>
+    
+    <lightning:card title="Simple Interest">
+        <aura:set attribute="actions">
+            <lightning:button label="Submit" onclick="{!c.callMe}"/>
+        </aura:set>
+        <lightning:input label="Enter the amount" value="{!v.pri}"/>
+        <lightning:input label="Enter the Year" value="{!v.term}"/>
+        <lightning:input label="Enter the rate" value="{!v.rate}"/>
+    </lightning:card>
+    <lightning:card title="See the Information">
+        Amount		:{!v.pri}<br/><br/>
+        Year		:{!v.term}<br/><br/>
+        Rate		:{!v.rate}<br/><br/>
+        Result		:{!v.res}<br/><br/>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,4 @@
+<aura:tokens extends="c:LT_Eg51_LightningToken">
+    <aura:token name="TRSMargin" value="100px" />
+    <aura:token name="TRSPadding" value="10Px" />
+</aura:tokens>

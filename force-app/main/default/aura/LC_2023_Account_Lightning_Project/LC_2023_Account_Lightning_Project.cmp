@@ -1,0 +1,52 @@
+<aura:component >
+    <aura:attribute name="buttonstate" type="Boolean" default="false"/>
+    <lightning:card iconName="standard:account">
+        
+        <aura:set attribute="actions">
+            
+            <lightning:buttonStateful
+                                      labelWhenOff="Follow"
+                                      labelWhenOn="Following"
+                                      labelWhenHover="Unfollow"
+                                      iconNameWhenOff="utility:add"
+                                      iconNameWhenOn="utility:check"
+                                      iconNameWhenHover="utility:close"
+                                      state="{! v.buttonstate }"
+                                      onclick="{! c.handleClick }"
+                                      />
+            <!-- <lightning:button iconName="utility:check" iconPosition="left" variant="bare"
+                              label="{!(v.Following) ? 'following' : 'following'}"
+                              onclick="{!(v.liked) ? c.following : c.following}"/> -->
+            
+            <lightning:buttonGroup>
+                <lightning:button label="New Contact" variant="neutral"/>
+                <lightning:button label="New Case" variant="neutral" />
+                <lightning:button label="New Note" variant="neutral" />
+                <lightning:buttonMenu>
+                    <lightning:menuItem label="New Opportunity" value="newOpportunity"/>
+                    <lightning:menuItem label="Change Owner" value="changeOwner"/>
+                    <lightning:menuItem label="Check for New Data" value="checkForNewdata"/>
+                    <lightning:menuItem label="Submit for Approval" value="submitForApproval"/>
+                    <lightning:menuItem label="Edit" value="edit"/>
+                    <lightning:menuItem label="Delete" value="delete"/>
+                    <lightning:menuItem label="Sharing" value="sharing"/>
+                </lightning:buttonMenu>
+            </lightning:buttonGroup>
+        </aura:set>
+        <aura:set attribute="title">
+            <!--  <lightning:icon iconName="standard:account"  alternativeText="Account" size="medium" />  -->
+            Account
+            <h1> <b>Burlington Textiles Corp of America </b><lightning:buttonIcon iconName="utility:hierarchy"/> </h1>
+        </aura:set>
+        
+        <aura:set attribute="body">
+            Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            website&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Account Owner&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Account Site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Industry&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </aura:set>
+    </lightning:card>
+    
+</aura:component>

@@ -1,0 +1,39 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        =====================
+        
+        		lightning:recordForm ::
+        		======================
+        	
+        		--> Used to display ReadOnly(view mode) and Edit Mode,
+        
+        
+        			A lightning-record-form component enable you to quickly create form to add, view or update record.
+        
+        			- Switches between view and edit mode automatically when the user begins editing the field in a view form
+        			- Provides Cancel and Save buttons automatically in edit forms
+        			- Uses the object's default record layout with support for multiple columns
+        			- Loads all field in the object's compact or full layout, or only the fields you specify.
+        			- Uses layOut to display As full (Complete) , Compact (Minimize), Custome.
+        			- Use Mode to shift between ReadOnly and Edit.
+        
+        	Note :: What is Difference Between View , ReadOnly And Edit Mode.
+        
+        			ReadOnly : Means Only View, There is only OutPut.
+        			
+        			Edit	 : Means always Editable Mode.
+        
+        			View	 : Means It showing as ReadOnly,but whenever you click on Pen Icon It comes in Edit Mode.
+        					   As Soon as Comming in edit Mode will have a Save Button in the bottom.
+        					   After The Data is saved in DataBase again it goes in view Mode.
+        
+        lightning-record-form recordid="001xxxxxxxxx" object-api-name="Account" layout-type="full / compact" mode="view"
+        
+        lightning-record-form recordid="001xxxxxxxxx" object-api-name="Account" layout-type="full / compact" mode="readonly"
+        
+        lightning-record-form recordId="001xxxxxxxxx" object-api-name="Account" layout-type="full / compact" mode="edit"
+	</aura:example>
+</aura:documentation>

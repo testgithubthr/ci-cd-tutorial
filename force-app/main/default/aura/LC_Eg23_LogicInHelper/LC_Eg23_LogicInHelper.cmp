@@ -1,0 +1,32 @@
+<aura:component controller="AC_Eg23_LogicInHelper">
+    <aura:attribute name="name" type="String"/>
+    <aura:attribute name="rating" type="string"/>
+    <aura:attribute name="phone" type="string"/>
+    <aura:attribute name="industry" type="string"/>
+    <aura:attribute name="result" type="string"/>
+    <aura:attribute name="flag" type="Boolean" default="false"/>
+    
+    <lightning:card title="Account creation">
+        <aura:set attribute="actions">
+            <lightning:button label="Create Acc" onclick="{!c.cllme}"/>
+            <lightning:button label="Clear" onclick="{!c.clearme}"/>
+        </aura:set>
+        <lightning:layout>
+            <lightning:layoutItem size="6" padding="around-small">
+                <lightning:input label="Enter account Name" value="{!v.name}"/>
+                <lightning:input label="Enter account rating" value="{!v.rating}"/>
+                <lightning:input label="Enter Account Phone" value="{!v.phone}"/>
+                <lightning:input label="Enter account industry" value="{!v.industry}"/>
+            </lightning:layoutItem>
+            <aura:if isTrue="{!v.flag}">
+                <lightning:layoutItem size="6" padding="around-small">
+                    Account name	:{!v.name}<p></p>
+                    Account rating  :{!v.rating}<p></p>
+                    Account phone   :{!v.phone}<p></p>
+                    Account industry:{!v.industry}<p></p>
+                    Result is       :{!v.result}<p></p>
+                </lightning:layoutItem>
+            </aura:if>
+        </lightning:layout>
+    </lightning:card>
+</aura:component>

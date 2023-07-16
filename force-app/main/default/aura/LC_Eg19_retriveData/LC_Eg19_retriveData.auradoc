@@ -1,0 +1,63 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        First Step :: (we have write apex class)
+        
+        	public class AC_Eg19_retriveData
+            {
+                @AuraEnabled
+                
+                public static Account GiveData()
+                {
+                    Account acc = [Select Id, Name, rating, Industry From Account Limit 1];
+                    return acc;
+                }
+            }
+        
+        
+        Second Step:: (We are going to explain component)
+        
+        	Whatever the data comes from server , we want to hold somewhere.for that we decalired the aura attribute.
+        	Variable is acc , what type of the data , we are going to hold Account.
+        	Do i need to initialise this ?
+        	No...Why 
+        	for holding the data we dont need initialization , Initialization is required only inserting a new Data,
+        	because new data will be stored i temporary location, but in this case we are fetching a data from database.
+        	That's the reason we dont reuired initialization.
+        
+        Note ::
+        	All the System Event can be handled with aura:handler
+        	any event onclick event, onchange event handle with aura:handler.
+        
+        aura:handler name="init" value="{!this}" action="{!c.showMe}"
+        -->
+        	name="init" value="{!this}"  these two value are fixed , if you try to changed it, it will not work...
+            ============================
+        	1. name of the event is always "init".(dont change the name)
+        	2. name of the system onload event is "init"
+        	3. init stands for initialization.(instantiation).
+        	4. value always {!this} (this component, for which component we want to initilize)
+        	5. whenever the page Load as soon as the page load i want to data to be display.
+        	6. I dont want that on the click data will display , while loading itself system has to call
+        	   server side the controller, server side controller retrive the data, data will be gven to client side controller
+        	   client side controller load the data on the page then the page wil loaded.
+        
+        	There are two method
+        		
+        		1. showMe :: showMe will be called,fired,trigger ; when whenever the page load.because it is in init. 
+        
+        		2. callMe :: 
+        
+        
+        	Step_1 
+        		-->  To connect our apex page , we have to write controller="ApexPageName"
+        		--> our component connected to our apex class.
+        
+        		action.setCallback(this,function(response){all the programme logic write here});
+        
+        	
+	</aura:example>
+</aura:documentation>

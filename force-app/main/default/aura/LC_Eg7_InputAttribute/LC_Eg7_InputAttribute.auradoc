@@ -1,0 +1,18 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        Input_Attribute ::
+        
+        Note :: whenever you dont define any datatype its take Text.
+        		Input dosent Takes String , It takes Text.
+        		we are getting default structured.
+        		with this data i want to play.
+        		whatever the we have entered, we have to hold.
+        		who holds the data, Attribute holds the data.so defined the attribute.
+        		whatever the data you enter in lastName has to got to the holder employee lastName.
+        		every input you define you should be corresponding attribute to hold data.
+	</aura:example>
+</aura:documentation>

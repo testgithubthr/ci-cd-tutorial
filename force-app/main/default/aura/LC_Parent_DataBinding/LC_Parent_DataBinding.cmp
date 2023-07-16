@@ -1,0 +1,10 @@
+<aura:component >
+    <aura:attribute name="parentAttr" type="string" default="Parent Attribute" />
+    
+    Sachin : {!v.parentAttr}<br/><br/>
+    	
+    <!-- Instantiate the child component -->
+    
+	<c:LC_Child_DataBinding  />
+
+</aura:component>

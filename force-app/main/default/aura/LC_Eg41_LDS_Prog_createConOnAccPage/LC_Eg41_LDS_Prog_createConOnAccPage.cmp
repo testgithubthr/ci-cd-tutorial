@@ -1,0 +1,22 @@
+<aura:component >
+    <aura:attribute name="con" type="object" />
+    <aura:attribute name="newCon" type="object" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.invokeMe}" />
+    
+    <force:recordData 
+                      aura:id="rec"
+                      fields="lastName,FirstName,Phone"
+                      targetFields="{!v.con}"
+                      targetRecord="{!v.newCon}"
+                      targetError="{!v.recError}"
+                      />
+    <lightning:card title="Create Contact">
+    	<aura:set attribute="actions">
+            <lightning:button label="Saveeeee" onclick="{!c.saveMe}" />
+        </aura:set>
+        <lightning:input label="first name" value="{!v.con.firstName}" />
+        <lightning:input label="last Name" value="{!v.con.lastName}" />
+        <lightning:input label="Phone" value="{!v.con.Phone}" />
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,13 @@
+<aura:component controller="AC_Eg33_EventApplicationAccConOpp">
+    
+    <aura:attribute name="oppDataTable" type="Object" />
+    <aura:attribute name="acolumns" type="List" />
+    <aura:attribute name="flag" type="Boolean" default="false"/>
+    
+    <aura:handler event="c:LE_Eg33_EventApplicationAccConOpp" action="{!c.callme}" />
+    
+    <aura:if isTrue="{!v.flag}">
+        <lightning:dataTable keyField="id" data="{!v.oppDataTable}" columns="{!v.acolumns}" />
+    </aura:if>
+	
+</aura:component>

@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:attribute name="msg" type="String" />
+    <aura:handler event="c:LE_Eg32_ApplicationEvent" action="{!c.showme}"/>
+    
+    <lightning:card title="Parent_1 (P1)">
+        Parent_1 : {!v.msg} 
+        
+        <c:LC_Eg32_P1C1_ApplicationEvent />
+        <c:LC_Eg32_P1C2_ApplicationEvent />
+        
+        
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,24 @@
+<aura:component controller="AC_createAccount">
+    <aura:attribute name="name" type="string" />
+    <aura:attribute name="Phone" type="string" />
+    <aura:attribute name="rating" type="string" />
+    <aura:attribute name="Industry" type="string" />
+    
+    <lightning:card title="Create Accout" >
+    	<aura:set attribute="actions" >
+            <lightning:button label="Save" onclick="{!c.callMe}" />
+            <lightning:button label="Clear" onclick="{!c.clearMe}" />
+        </aura:set>
+        
+        <lightning:input label="Account Name" value="{!v.name}" />
+        <lightning:input label="Account Phone" value="{!v.Phone}" />
+        <lightning:input label="Account Rating" value="{!v.rating}" />
+        <lightning:input label="Account Industry" value="{!v.Industry}" />
+    </lightning:card>
+    <lightning:card title="See The Result" >
+        Account Name :"{!v.name}" <br/><br/>
+        Account Phone: "{!v.Phone}" <br/><br/>
+        Account Rating: "{!v.rating}" <br/><br/>
+        Account Industry :"{!v.Industry}"<br/><br/>
+    </lightning:card>
+</aura:component>

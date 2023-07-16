@@ -1,0 +1,6 @@
+<aura:component implements="c:LI_Eg48_InterfaceWithEvent">
+	<lightning:card title="Component 3 Only-Fire" >
+        <lightning:button label="submit" onclick="{!c.callme}" />
+    </lightning:card>
+    <c:LC_Eg48_2_InterfaceWithEvent />
+</aura:component>

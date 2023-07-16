@@ -1,0 +1,45 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+        
+		Example Description ::
+        ======================
+        
+        	--> I dont neither Full Mode nor Compact Mode.
+        		
+        		Full Mode will be Lengthy.
+        		Compact mode will be to short
+        	--> That's the reason i want to go with as per requirement means Custom Mode.
+        
+        	Note :: What is difference between System Record Page and Custome Record Page
+        	
+        			System Record Page will be display --> Field value display below the field label Name.
+        		
+        			Custome Record Page will be display -> Field Value display front of field label Name.
+        
+        	Note :: Without hard Coded RecordId ,how to fetch the record id from the database.
+        
+        	Q. What is a flexi Page ?
+        
+        	A. The Default structure of a salesforce of each object is called flexi Pages.
+               Every flexi page will have recordID.
+        
+        	   aura:component implements= "flexipage : availabelForRecordHome", Force:hasRecordId , access = "global"
+        
+				--> Implement means Interface Concept here.
+
+				--> FlexiPage : The Default structure of a salesforce of each object is called flexi Pages
+        						Every flexi page will have recordID.
+        	
+        		--> Force:hasRecordId :: If you have Force:hasRecordId , then only be the record ID will be copied.
+        								 Then ony the system will take the recordId.
+        
+        			Note :: Without Declaring attribute called RecordId , Syatem takes Automatically recordId from this Force:hasRecordId.
+        
+        					eg. recordId = "{!v.recordId}" 
+        
+        		Dynamic RecordId :: I can use Dynamic Record Id only through a flexi Page.
+        		===========================================================================
+	</aura:example>
+</aura:documentation>

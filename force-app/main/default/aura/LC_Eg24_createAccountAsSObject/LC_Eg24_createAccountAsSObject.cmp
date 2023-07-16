@@ -1,0 +1,13 @@
+<aura:component controller="AC_Eg24_accountCreation">
+    
+    <aura:attribute name="acc" type="Account" default="{sObjectType:'Account'}"/>
+    
+    <lightning:card title="Account creation">
+        <lightning:input label="Account Name" value="{!v.acc.Name}"/>
+        <lightning:input label="Account Rating" value="{!v.acc.Rating}"/>
+        <lightning:input label="Account Phone" value="{!v.acc.Phone}"/>
+        <lightning:input label="Account Industry" value="{!v.acc.Industry}"/>
+        
+        <lightning:button label="Submit" onclick="{!c.callMe}"/>
+    </lightning:card>
+</aura:component>

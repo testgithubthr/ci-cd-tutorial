@@ -1,0 +1,16 @@
+<aura:component >
+    <aura:attribute name="empname" type="String" />
+    <aura:attribute name="empcity" type="string" />
+    
+    <aura:method name="callme" action="{!c.invoke}">
+        
+        <aura:attribute name="name" type="string" />
+        <aura:attribute name="city" type="string" />
+        
+    </aura:method>
+    
+    <lightning:card title="Action Overrides Eg">
+        Employee Name : {!v.empname} <p></p>
+        Employee City : {!v.empcity} 
+    </lightning:card>
+</aura:component>

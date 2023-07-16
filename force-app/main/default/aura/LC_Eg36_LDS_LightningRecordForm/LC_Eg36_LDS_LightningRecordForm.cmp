@@ -1,0 +1,57 @@
+<aura:component >
+	<lightning:layout>
+    	<lightning:layoutItem size="2">
+        	<lightning:recordForm 
+                           recordId="0015g00000ri649AAA"
+                           objectApiName="Account"
+                           layoutType="Full"
+                           mode="view" 
+                           />
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="2">
+        	<lightning:recordForm 
+                           recordId="0015g00000ri649AAA"
+                           objectApiName="Account"
+                           layoutType="Full"
+                           mode="edit" 
+                           />
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="2">
+        	<lightning:recordForm 
+                           recordId="0015g00000ri649AAA"
+                           objectApiName="Account"
+                           layoutType="Full"
+                           mode="readOnly" 
+                           />
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="2">
+        	<lightning:recordForm 
+                           recordId="0015g00000ri649AAA"
+                           objectApiName="Account"
+                           layoutType="Compact"
+                           mode="view" 
+                           />
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="2">
+        	<lightning:recordForm 
+                           recordId="0015g00000ri649AAA"
+                           objectApiName="Account"
+                           layoutType="Compact"
+                           mode="edit" 
+                           />
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="2">
+        	<lightning:recordForm 
+                           recordId="0015g00000ri649AAA"
+                           objectApiName="Account"
+                           layoutType="Compact"
+                           mode="readOnly" 
+                           />
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

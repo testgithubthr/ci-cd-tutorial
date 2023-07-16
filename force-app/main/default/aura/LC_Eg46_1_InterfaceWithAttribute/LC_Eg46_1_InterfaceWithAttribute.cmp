@@ -1,0 +1,15 @@
+<aura:component implements="c:LI_Eg46_InterfaceWithAttribute" >
+	<!-- When we implements Interface here Automatically all Interface Attribute will call Here  -->
+    
+    <lightning:card title="Interface_Eg1">
+        Name : {!v.emapName}<br/><br/>
+        Age  : {!v.age}
+    </lightning:card>
+    
+    <lightning:card title="Emp Details" >
+        <lightning:input label="Employee name" value="{!v.empName}" />
+        <lightning:input label="Date Of Birth" value="{!v.DOB}" />
+        <lightning:input label="Email" value="{!v.Email}" />
+        <lightning:Input Label="Phone" value="{!v.Phone}" />
+    </lightning:card>
+</aura:component>

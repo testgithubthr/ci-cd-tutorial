@@ -1,0 +1,29 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        DataTable ::
+        ============
+        	1. Lightning dataTable used to display table in lightning page.
+        	
+        	Which attribute are compulsory ::
+        
+        		keyField="Id".      -->  always it should be ID.
+        		Data="{!v.acc}" 	---> what type of the data inside the table.
+        		columns="{!column}" ---> 
+        
+        Controller ::
+        ============
+        	
+        		var clmn=[]; ---->always column is created in bracket.inside this JSON Format
+        
+        		[{"label":"Account Name","fieldName":Name,type:"Text"}], like this how many column we want.
+        		
+        		Once we have created structure , this structure to be passed , where , to the component
+        
+        		component.set("v.column",clmn);
+        	
+	</aura:example>
+</aura:documentation>

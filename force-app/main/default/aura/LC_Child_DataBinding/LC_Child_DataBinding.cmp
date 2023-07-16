@@ -1,0 +1,5 @@
+<aura:component >
+	<aura:attribute name="childAttr" type="String" default="Child attribute"/>
+    
+    Tushar : {!v.childAttr}
+</aura:component>

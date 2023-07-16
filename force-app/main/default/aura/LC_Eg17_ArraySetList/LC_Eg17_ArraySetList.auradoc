@@ -1,0 +1,27 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        Attribute take everything in text format only..
+        We cannot define list of integer, list of string in aura , we can only use list.
+        
+    aura:attribute name="ages" type="Integer[]" default="[55,76,34,45,90]" 
+    aura:attribute name="cities" type="List" default="['jal','Pune','Hyd','Ban']" 
+    aura:attribute name="places" type="Set" default="['kphb','dsnr','sc','upl']" 
+        
+        We cannot pull all the data in single field.
+        
+        Aura:Iteration ::
+        	
+        	Whenever we have more than one data we need to have loop to display all the data
+        	
+        	aura:iteration is equal to loop.
+        
+        Note::
+        	
+        Inside a loop not only iterate the data but we can also iterate the component.
+        
+	</aura:example>
+</aura:documentation>

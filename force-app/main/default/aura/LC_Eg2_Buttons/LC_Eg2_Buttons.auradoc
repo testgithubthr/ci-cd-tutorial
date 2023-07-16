@@ -1,0 +1,25 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description :
+        
+        The First system component command that you are laerning is called lightning Button.
+        case sensitive.
+        System doesnt give you help text.  
+        
+        I want to colour to this button ,there are diffrent colour are vailable.
+        
+        what are the colour variant we have ::
+        
+        	1. Base
+        	2. Brand
+        	3. Destructive
+        	4. Destructive Text
+        	5. Successs
+        	6. Inverse
+        	7. Neutral (By default)
+        
+        
+	</aura:example>
+</aura:documentation>

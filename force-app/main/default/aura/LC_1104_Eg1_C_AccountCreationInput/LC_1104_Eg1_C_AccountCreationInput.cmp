@@ -1,0 +1,16 @@
+<aura:component >
+    <aura:attribute name="newAccount" type="Account" default="{sObjectType:'Account'}" />
+    <aura:registerEvent name="nickname" type="c:LE_1104_Eg1_AccountCreationEvent" />
+    
+    <lightning:card title="Account Creation form">
+    	<aura:set attribute="actions">
+            <lightning:button label="Save" onclick="{!c.callMe}" />
+            <lightning:button label="Clear" onclick="{!c.clearMe}" />
+        </aura:set>
+        <div>
+            <lightning:input label="Account Name" value="{!v.newAccount.Name}" />
+            <lightning:input label="Account Phone" value="{!v.newAccount.Phone}" />
+            <lightning:input label="Account Rating" value="{!v.newAccount.rating}" />
+        </div>
+    </lightning:card>
+</aura:component>

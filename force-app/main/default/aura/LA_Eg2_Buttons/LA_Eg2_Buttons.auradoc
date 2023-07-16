@@ -1,0 +1,16 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        Application doesnt have design,we have to apply design How?
+        
+        extends : "force : slds"  slds --> Salesforce lightning design system.(by default salesforce design will apply)
+        
+        If you are not use extends :"force:slds" in the application then look like a normal button.
+        
+        
+        
+	</aura:example>
+</aura:documentation>

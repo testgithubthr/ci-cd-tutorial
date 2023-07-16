@@ -1,0 +1,39 @@
+<aura:component >
+    
+    <aura:attribute name="acc" type="Account" default="{sObjectType:'Account'}" />
+    <aura:attribute name="con" type="Contact" default="{sObjectType:'Contact'}" />
+    <aura:attribute name="opp" type="Opportunity" default="{sObjectType:'Opportunity'}" />
+	<lightning:layout multipleRows="true">
+    	<lightning:layoutItem size="12">
+        <!--	<lightning:card title="Account">
+            	<aura:set attribute="actions">
+                    <lightning:button label="Submit" onclick="{!c.callMe}"/>
+                </aura:set>
+                <lightning:input label="Enter the Name" value="{!v.acc.Name}" />
+                <lightning:input label="Enter the Rating" value="{!v.acc.rating}"/>
+            </lightning:card>   -->
+            <c:LC_2023_Account_Lightning_Project />
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="7">
+        	<lightning:card title="Contact">
+            	<aura:set attribute="actions">
+                    <lightning:button label="Submit" onclick="{!c.callMe}"/>
+                </aura:set>
+                <lightning:input label="Enter the lastName" value="{!v.con.LastName}" />
+                <lightning:input label="Enter the FirstName" value="{!v.con.firstName}"/>
+            </lightning:card>
+        </lightning:layoutItem>
+        
+        <lightning:layoutItem size="5">
+        	<lightning:card title="Opportunity">
+            	<aura:set attribute="actions">
+                    <lightning:button label="Submit" onclick="{!c.callMe}"/>
+                </aura:set>
+                <lightning:input label="Enter the Opportunity Name" value="{!v.opp.Name}" />
+                <lightning:input label="Enter the CloseDate" value="{!v.opp.CloseDate}"/>
+                 <lightning:input label="Enter the StageName" value="{!v.opp.StageName}"/>
+            </lightning:card>
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

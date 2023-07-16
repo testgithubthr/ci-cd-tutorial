@@ -1,0 +1,7 @@
+.THIS.one
+{
+    margin-top : token(TRSMargin);
+    margin-left: token(TRSMargin); 
+    color : token(TRSBGClour);
+    border-color :token(TRSBorderColour);
+}

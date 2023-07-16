@@ -1,0 +1,9 @@
+<aura:interface description="Interface template">
+    
+    <aura:method name="callMe" action="{!c.invoke}">
+    
+        <aura:attribute name="empname" type="string" />
+        <aura:attribute name="empcity" type="string" />
+        
+    </aura:method>
+</aura:interface>

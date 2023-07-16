@@ -1,0 +1,14 @@
+<aura:component implements="c:LI_Eg47_InterfaceWithMethod">
+    
+    <aura:attribute name="en" type="string" />
+    <aura:attribute name="ec" type="string" />
+    
+    <c:LC_Eg47_3_C_InterfaceWithMethod aura:id="one"/>
+    
+    <lightning:card>
+        <lightning:input label="Employee Name" value="{!v.en}" />
+        <lightning:input label="Employee Place" value="{!c.ec}" />
+        
+        <lightning:button label="Submittttttt" onclick="{!c.show}" />
+    </lightning:card>
+</aura:component>

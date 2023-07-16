@@ -1,0 +1,10 @@
+<aura:component >
+    // from this component we want to pass value to the child.(LC_Eg45_Actionoverrides)
+    
+    <c:LC_Eg45_ActionOverrides aura:id="one" />
+    
+    <lightning:button label="submit" onclick="{!c.show}" />
+    
+   
+    
+</aura:component>

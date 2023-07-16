@@ -1,0 +1,28 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="con" type="object"/>
+    <aura:attribute name="newCon" type="Object" />
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}" />
+    
+    	<force:recordData
+                          
+                         aura:id="rec"
+                         fields="Lastname,firstName,Phone"
+                         targetFields="{!v.con}"
+                         targetRecord="{!c.newCon}"
+                         targetError="{!v.recError}"
+                        />
+    
+    <lightning:card title="Create Contact">
+        
+    	<aura:set attribute="actions">
+        
+            <lightning:button label="Saveeeee" onclick="{!c.saveMe}" />
+            
+        </aura:set>
+    
+        <lightning:input label="Contact first Name" value="{!v.con.firstName}" />
+        <lightning:input label="Contact Last Name" value="{!v.con.lastname}" />
+        <lightning:input label="contact Phone" value="{!v.con.Phone}" />
+        
+    </lightning:card>
+</aura:component>

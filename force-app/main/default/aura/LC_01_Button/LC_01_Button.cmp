@@ -1,0 +1,11 @@
+<aura:component >
+    <lightning:button label="Base" title="Base action" variant="base" />
+    <lightning:button label="Neutral" title="Neutral action" variant="Neutral" />
+    <lightning:button label="brand" title="brand action" variant="brand" />
+    <lightning:button label="brand-outline" title="brand-outline action" variant="brand-outline" />
+    <lightning:button label="destructive" title="destructive action" variant="destructive" />
+    <lightning:button label="destructive-text" title="destructive-text action" variant="destructive-text" />
+    <lightning:button label="success" title="success action" variant="success" />
+    
+    
+</aura:component>

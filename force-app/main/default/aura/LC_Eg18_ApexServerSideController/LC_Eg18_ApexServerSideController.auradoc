@@ -1,0 +1,127 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        Lightning Object Controller and apex class are also called as Server Side Controller.
+        
+        What is server side Controller and client Side Controller?
+        -->
+       		force.com							Browser
+        		|									|
+        	Logic Part(DataBase)				Enter the length
+        										Enter the Bredth
+        										Result
+        
+        Note : Whenever we write a class in vf page its all server side controller.
+        
+        
+        DataBase_Request ::
+        
+        			Suppose data is an availabel in the dataBase and i want process it, problem is, where is data,
+        			at client side , no , data are availabel in the server , so such case you write server side controller.
+        
+        			I am only using server data to retrive the data and giving to the page, all the logic to process the data
+        			will not happen again, it will happen again on page, So that i reduce load on the server.
+        
+        Note ::
+        		All the developement concept are you learning like apex class, Trigger, SOQl, DML etc these are all
+        		server side controller.
+        		
+        		We are dependent on server side controller in lightning only for the data.
+        		all the reamining processing we will do it where in the client side controller.
+        	
+        		Any type of DML write, apex class. trigger that you write, SOQL, SOSL, all are server side controller.
+        
+        		Whatever the function you write that are client side controller.
+        
+        Q. can client side controller talk to Server side controller?
+        -->  Yes....When
+        	 Whenever we want the data , we call the server side controller, we will get the data then we will process it,
+        	 we will not process the data on server and then get the data.
+        
+        Q. How I am going to write server side controller and then interact with client side controller.
+        
+        
+        Apex Server Side Controller ::
+        ==============================
+        	1. In Every server side controller, you have to use @aAuraEnabled.
+        	
+        	2. Use the @ AuraEnabled anotation to enabled access to the controller method.
+        
+        	3. Method must be static amd marked public or Global, Non-static method aren't supported.
+        
+        	4. If the Method return an Object instance method that retrieve the value of the object, instance method
+        		should be public.
+        	
+        	5. Use unique name for client side and server side action in a component.
+        
+        	6. Method should have a return type.
+        
+        
+        	public class retrivedata
+        	{
+        		@AuraEnabled
+        		
+        		public static Account GiveData()
+        		{
+        			Account acc=[select id,name,rating,industry from Account limit 1];
+        			return acc;
+       			}
+        	}
+        
+        Note --> this is how the write a server side controller.
+        		
+        Q. What is purpose of the programme?
+        --> to pull the data.
+        
+        Before Method    ---> @AuraEnabled
+        Access Specifier ---> Global / Public
+        Method Must be   ---> Static
+        returnType       ---> Must
+        
+        
+        Now How to handled client side controller?(In client side controller , what we have to do)
+        -->
+        1. first thing, we have to do and call a function / action.
+        2. Once the method call, Pass the parameter.
+        3. Set the Parameter.
+        4. Invoke the Function.
+        5. getResponce
+        6. enqueueAction
+        
+        
+        Note :: Use unique Name for client side and server side action in component, No overloading concept supported
+        
+     Parameter and actions ::
+     ========================
+        
+        1. action.setParams() to set the data to be passed from component attribute to the server side controller.
+        	action.setParams({firstName:cmp.get("v.firstName")});
+        
+        2. action.setCallback() sets a callBack action that is invoked after the server-side action returs.
+        	action.setCallback(this,function(response){...});
+        
+        	  var st = response.getState();
+        	   -->
+        		It will give the state of the enque job.
+        		whether the enque job was able to contacts the server side controller? ---> Yes
+        		is it enqueue job was able to pass the data to the server side controller?--> Yes
+        		is it enqueue job successfully retrive the response from the server side controller?-->
+        		
+        	That will be pulled in the state.
+        	
+        
+        3. response.getReturnValue() gets the value returned from the server.
+        
+        4. $A.enqueueAction(action) adds the server side controller action to the queue of action to be executed, 
+        	Recommended : all actions that are enqueued will run at the end of the event loop, rather than sending
+        	a separet request for each individual action, the framework process the event chain and batches the action
+        	in the queue into one request. the actions are asynchronous and have callback.
+        
+        
+        	 
+        		
+	</aura:example>
+</aura:documentation>

@@ -1,0 +1,28 @@
+<aura:component >
+    <lightning:card title="Account" iconName="standard:account" >
+        <aura:set attribute="actions">
+            <lightning:button label="Follow" iconName="utility:add" />
+            <lightning:buttonGroup>
+                <lightning:button label="New Contact" />
+                <lightning:button label="New Case" />
+                <lightning:button label="New Note" />
+                <lightning:buttonMenu alternativeText="Menu">
+                    <lightning:menuItem value="noeOpp" label="New Opportunity"/>
+                    <lightning:menuItem value="noeOpp" label="Change Owner"/>
+                    <lightning:menuItem value="noeOpp" label="Check for New Data"/>
+                    <lightning:menuItem value="noeOpp" label="Submit for Approval"/>
+                    <lightning:menuItem value="noeOpp" label="Edit"/>
+                    <lightning:menuItem value="noeOpp" label="Delete"/>
+                    <lightning:menuItem value="noeOpp" label="Sharing"/>
+                    <lightning:menuItem value="noeOpp" label="view account hirarchy"/>
+                    <lightning:menuItem value="noeOpp" label="view website"/>
+                </lightning:buttonMenu>
+            </lightning:buttonGroup>
+        </aura:set>
+        
+        <aura:set attribute="title">
+            Account
+            <h1><b> Burlington Textiles Corp of America</b> <lightning:buttonIcon iconName="utility:hierarchy"/> </h1>
+        </aura:set>
+    </lightning:card>
+</aura:component>

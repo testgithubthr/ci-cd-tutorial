@@ -1,0 +1,87 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        =====================
+        	
+        	Lightning-LDS (Lightning Data System) ::
+        	========================================
+        
+        		Lightning Data Service ::
+        		=========================
+        
+        			Lightning Data Service is a services provided in a salesforce lightning where without writting a
+        			single piece of programme, How can i able to Insert , Update , Retrive , Delete Record means
+        			its a CRUD Operation.
+        
+        
+        			Lightning Data Service is a centralized data catching framework which is used to perform CRUD operation,
+        			like Save, create, update and delete a record without server side apex-code is called LDS.
+        
+        
+        		Lightning Data Service provides reusable Aura Component that ::
+        		===============================================================
+        
+        			- Minimize XMLHttpRequest (XHRs)
+        			- Fetch record once, reducing network transfer,app server load and database server load.
+        			- Cache record data on the client, separate from component metadata
+        			- Share record data across components
+        			- Enable progressive record loading, catching and merging more field and layout into the cache.
+        			- Enable proactive cache population
+        			- Promote consistency by using only one instance of record data across multiple components.
+        			- create notification when record data changes.
+        
+        
+        		There are two types of LDS Services are available ::
+        		===================================================
+        			
+        			1. Form Base
+        			2. Programming Base.
+        
+        				Lightning Data Service-Form Based ::
+        				====================================
+        				
+        					Form Based 												Function
+        			------------------------------------------------------------------------------------
+        			1. lightning:recordForm											Display, Create or edit records
+        	
+        			2. lightning:recordViewForm(with lightning output field)		Display Record Only
+        
+        			3. lightning:recordEditForm(with lightning input filed)         Create or Editrecords only
+        
+        			4. force:recordData												Display,Create,Edit,Delete record with
+        																			granular customization.
+        
+        			
+        			lightning:recordViewForm ::
+        			===========================
+        
+        				--> To Display in a Read Only mode.That means you cannot edit the data, you can only read.
+        				--> To view the Data in read only mode use with lightning Output.
+        				--> Requires ID to display records.(On which Object you want to display, that object record ID)
+        				--> Requires ObjectApiName 
+        
+       				Note :: Every Lightning View Form should have lightning OutPut Field.
+        				
+        
+        				A lightning:recordViewForm component enables you to display read only record data with one or more
+        				fields and label associated with that record.
+        
+        				lightning:recordViewForm requires record ID to display the fields on the records.
+        
+        
+        				aura:component
+        			
+        					lightning:recordViewForm recordId="001xxxxxxxxxx" objectApiName="my_Contact__c"
+        
+        						lightning:outputField fieldName="Name"
+        						lightning:outputfield fieldName="Email__c"
+        
+        					/lightning:RecordVieForm
+        				/aura:component
+        
+        					
+        
+	</aura:example>
+</aura:documentation>

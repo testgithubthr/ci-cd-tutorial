@@ -1,0 +1,5 @@
+<aura:component >
+    <lightning:button label="create Component" variant="Brand" onclick="{!c.createme}" />
+    {!v.body}
+    <lightning:button label="destroy Component" variant="destructive" onclick="{!c.destroyme}" />
+</aura:component>

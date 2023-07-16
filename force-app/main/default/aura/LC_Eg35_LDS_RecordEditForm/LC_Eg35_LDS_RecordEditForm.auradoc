@@ -1,0 +1,100 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+		
+        LDS :: Lightning Data Service :
+        ===============================
+        
+        Definition :
+        ============
+        	LDS is a services provided in salesforce lightning where without writing a single piece of programme
+        	How can i able to INSERT, DELETE, UPDATE Record.
+        
+        	which is used to load, Save, Create, Delete a Record without writing a Server Side Code.
+        
+        	LDS is a Centralized data catching framework which is used to load,Save,create and delete
+        	a record without server side apex code.
+        	
+        	C- Create
+        	R-Retrieve
+        	U-Update
+        	D-Delete
+        
+        There are Two Type LDS Available :
+        ==================================
+        	
+        	1. Form Based
+        	2. Programming Based
+        
+        1. Form Based:
+        ==============
+        
+        	1. lightning:recordForm
+        	2. lightning:recordViewForm
+        	3. Lightning:recordEditForm
+        
+        	1. Lightning :recordViewForm :
+        
+        			To Display the data in Read only Mode used with lightning output
+        			Requires Id to display Record.
+        
+        	aura:component
+        
+        		lightning:recordViewForm recordId="andbaskjfbnak" objectApiName="My_Contact__c"
+        
+        			lightning:outputField fieldName="Name"
+        			lightning:outputField fieldName="Email__c"
+        
+
+        Lightning : RecordForm  ::(Mostly Used)
+        ========================================
+        
+        	A lightning-record-form component enables you to quickly create forms to add, view or update record.
+        	
+        	switches between view and edit modes automatically when the user begins editing a field in a view form
+        	
+        	Provide cancel and save button automatically in edit form.
+        
+        	Uses the object default record layout with support for multiple column
+        
+        	load all field in the object compact or full layout, or only the fields you specify.
+        
+    	Example :
+        
+        	lightning-record-form recordId="ajdbakjdbna" 
+        						  objectApiName="Account"
+        						  layout-type="Full" or "Compact"
+        						  Mode="View" , "readOnly", "Edit"
+        
+        
+        View ::
+        =======
+        
+        	At the Time of onloading its display view mode but when you click on pencile button then
+        	its go edit mode.you cant double click, you cant edit.
+        
+        
+        Edit ::
+        =======
+        
+        	At the time of onloading its display in edit form, after entering the data and saved then goes view Mode.
+        
+        readOnly ::
+        ===========
+        
+        	we cannot edit, change it.
+        
+        LayoutType : full :: full information will load.
+        
+        LayoutType : compact :: limited field will load.
+        
+        But i dont want to go full layout because this layout will give me much more information.
+        	i dont want to compact layout because this layout will give me much less information.
+        
+        I want to choose field, what i want.
+       
+        
+        
+        
+	</aura:example>
+</aura:documentation>

@@ -1,0 +1,23 @@
+<aura:component >
+    <aura:attribute name="ages" type="Integer[]" default="[12,22,33,44]" />
+    <aura:attribute name="cities" type="List" default="['Hyd','Pune','Ban','Mum']" />
+    <aura:attribute name="place" type="set" default="['KPHB','DSNR','SC','UPL']" />
+    
+    	<lightning:layout multipleRows="true">
+            <aura:iteration items="{!v.ages}" var="a" >
+            	<lightning:layoutItem size="2" padding="around-small">
+                	<p> {!a} </p>
+                </lightning:layoutItem>
+            </aura:iteration>
+            <aura:iteration items="{!v.ages}" var="c" >
+            	<lightning:layoutItem size="2" padding="around-small">
+                	<p> {!c} </p>
+                </lightning:layoutItem>
+            </aura:iteration>
+            <aura:iteration items="{!v.place}" var="p" >
+            	<lightning:layoutItem size="2" padding="around-small">
+                	<p> {!p} </p>
+                </lightning:layoutItem>
+            </aura:iteration>
+    	</lightning:layout>
+</aura:component>

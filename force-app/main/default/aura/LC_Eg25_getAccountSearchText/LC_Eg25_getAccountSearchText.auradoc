@@ -1,0 +1,22 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        =====================
+        
+        Apex Class ::
+        =============
+        	getAccount(string searchText)
+        
+        	--> from lightning page we are pass this keyword...(searchText)
+        
+        	string query = 'select id,name,rating,phone,industry from Account where name like \'%'+searchText+'%\'';
+        	-->
+        		with this above statement we are formmimg a query, that string passing to database.query(query)
+        		Database.query(query) will run that string and return the data to the account.
+        
+        Note :: whenever we are calling the method we are returning the Account record.
+        	
+	</aura:example>
+</aura:documentation>

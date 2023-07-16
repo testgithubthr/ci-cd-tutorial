@@ -1,0 +1,17 @@
+<aura:component controller="AC_LE_createRetrieveAccount">
+    <aura:attribute name="newAccount" type="Account" default="{sObjectType:'Account'}" />
+    <aura:registerEvent name="nickName" type="c:LE_AccountCreationEvent" />
+    <lightning:card title="Create Account" >
+        
+    	<aura:set attribute="actions">
+            <lightning:button label="Save" onclick="{!c.callMe}" />
+            <lightning:button label="clear" onclick="{!c.clearMe}" />
+        </aura:set>
+        
+        <lightning:input label="Account name" value="{!v.newAccount.Name}" />
+        <lightning:input label="Account Phone" value="{!v.newAccount.Phone}" />
+        <lightning:input label="Account rating" value="{!v.newAccount.Rating}" />
+        
+    </lightning:card>
+	
+</aura:component>

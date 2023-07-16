@@ -1,0 +1,10 @@
+<aura:component >
+    <lightning:recordEditForm recordId="0015g00000ri649AAA" objectApiName="Account">
+        <lightning:inputField fieldName="Name" />
+        <lightning:inputField fieldName="Phone" />
+        <lightning:inputField fieldName="fax" />
+        <lightning:inputField fieldName="Rating"/>
+        <lightning:inputField fieldName="Industry" />
+        <lightning:inputField fieldName="Description" />
+    </lightning:recordEditForm>
+</aura:component>

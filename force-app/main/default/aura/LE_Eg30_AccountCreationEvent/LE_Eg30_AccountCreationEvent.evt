@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="Account Creation Event" >
+    <aura:attribute name="acc" type="Account"/>
+</aura:event>

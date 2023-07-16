@@ -1,0 +1,32 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        ButtonIcon ::
+        
+            There are two things are mandate which are iconName and alterNativeText (Give Nick Name to iconName)
+             
+            Whenever buttonBorder not to be visible we use the variant (variant="Bare").
+            
+            This will give you border less button with an Icon.
+        
+        ButtonMenu ::
+        
+        	whenever click on Delete system will return del , Base on the return Value , i will go ahead an written logic.
+        		
+        	I want to catogarize menu means (SubMenu) menu under menu.
+        
+        	i can also add subMenu Under subMenu	
+        
+        ButtonIconStatefull ::
+        
+        	onClick --- when you click on it , what logic to be called , What should Happen.(onClick="{!c.callMe}")
+        
+        if Selected ---if selected what logic to be called these are logic (selected="{!c.selected}")
+        
+        Note :: where do i write a logic in component bundled we start writting logic in controller.
+        
+	</aura:example>
+</aura:documentation>

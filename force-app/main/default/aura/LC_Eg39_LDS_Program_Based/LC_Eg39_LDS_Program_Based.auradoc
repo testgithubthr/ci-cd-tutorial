@@ -1,0 +1,22 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        ======================
+        	In My force data, force:recordData
+        	Anything which is in my force Data only those Data will be captured.
+        	That mean, if i not use any field(rating) in my force:recordData even i am using 
+        	in rating field on component that field system will not consider.
+        
+        Because, you are using that field on component but that is not a part of force:recordData
+                  
+        Whatever the force:recordData will cover thoes field only will be in the scan area.
+        in the scanner.reamaining field out of the scanner.
+        
+        Note :: In this current Case,force:recordData doesn't have the rating field but i am using
+        		in my output area.
+        
+        		whichever field you placed in the page make sure that you cover them by force:recordData.        
+	</aura:example>
+</aura:documentation>

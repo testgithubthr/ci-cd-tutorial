@@ -1,0 +1,163 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description :
+        ======================
+        
+        To handle Such Kind of requirement, we will yse Dynamic Component.
+        ===================================================================
+        
+        	Create and Destroy Component that's The reasom we go for dynamic component.
+        	eg. flipcard, if you select product and addcart screen will apeear, and when you close
+        		it it destroy.go back to the again addCart.
+        
+        It is more Hide and Disble.
+        It is equivalent to aura:if
+        Here component is created but problem is Memory, what are the challenges are.
+        challenges are creating the memory loction.
+        Dynamic component occupies huge Memory and hence you have to handle thoes dynamic component effectively.
+        In our project, after the Dynamic component is created, after the work is over we need to make sure that
+        to avoid any type of memory leakage, you have to kill or you have to destroy the dynamic component
+        It is mandate must.
+        
+        Destroying Dynamic Components it is Must.
+        
+        
+        Action Overrides:
+        	==================
+        	
+        		Function name can be anything, whatever the function name we are using,
+        		inside also we have to use Same function Name is called Action Overrides.
+        
+        Action overrides is a alternative of your event, These  are alternative Topic.
+        
+        Same thing you can do with event and also Action Overrids also.
+        ===============================================================
+        
+        Action Override allows you to directly call method of component from a client side a controller
+        that means another component can call the method of child component.
+        
+        child component method can be call by Parent.
+        =============================================
+        Action Override only work in child - parent environment. It doesnt work on individual environment.
+        eg. In application event, There is no Parent child combination.
+        
+        In Single Word, This is like a component Event.
+        ==============================================
+        
+        Action Override is a lternative with component Event.
+        =======================================================
+        
+        In Action Override, from Parent can controll and pass the data to the child.
+        In event from child pass the data or value to all direction.because its a bubbling concept,
+        Its goes bottom to top.
+        
+        If you asking Application event, then its a Possibe, "YES". But In Component Event...."NO".
+        
+        Component event never support inheritance only support bubbling........
+        
+        Action Override work only inheritace Mechanism.That's means Every child should have parent.
+        
+        Inheritance Means Parent Child Relation.In heritance we need to have two component one has to parent,
+        one has to child.
+        
+    Action Overrides ::use of (Parent-child)relationship.
+    ======================================================
+        Definition :
+        ============
+        
+        	Action Overrides Enables to call a method of a component from client-side-controller
+        	By a parent component directly is called Action Overrides.
+        
+        Use aura:method for action Overrides.
+        =====================================
+        
+        	1. Action Overrides should have Public and Global Access.
+        	2. whenever you want to Action Overrides we have to use aura:method.
+        	3. we are passing input data from parent component-controller to cild component.
+        	
+        
+       child Component:
+       ================
+        
+        We are declairing aura:method in component
+        =================================================
+        	aura:method name="callMe" action="{!c.}"
+        
+        		aura:attribute name="firstName" type="string"
+        		aura:attribute name="LastName" type="string"
+        
+        /aura:method
+        
+        
+        child Controller:
+        ================
+        
+        How to call aura:method attribute in controller
+        =================================================
+        
+        	var params = event.getparam('arument');
+        
+        		var fnm = params.Firstname;
+        		var lnm = params.LastName;
+        
+        		component.set("firstName",fnm);
+        		component.set("lastname",lnm);
+        
+        Note : 
+        	event.getparam('arument'); is the standard command, we dont need to create event for this.
+        	This gives Data from calling component (parent)
+        	from the argument we are reading variable and setting it.
+        
+			In programming, the term "argument" refers to the values that are passed into a method or function when it is called.
+        	The argument keyword in a method is used to declare a variable that will hold one of these values.        
+        	Argument can be Array or collection to hold the data from method or function.
+        
+        	Argument is collection of array, whatever the variable declaired in the Method, that all store in argument
+        	from that component we call it and pass it to the component variable.
+        
+        	When the invoke function is called, a value will be passed in for name(argument),
+        	and that value will be used within the function.
+        
+        	Now we are calling child component in parent component with aura:id="one"
+        	eg. first create parent component under parent component call child component.
+        
+        	
+        	parent component:
+        ======================
+        
+        		c:childComponentname aura:id="one"
+        
+        		lightning:button label="submit" onclick="{!c.show}"
+
+        	Parent Controller  :
+        ======================
+        
+        	show : funcion(component,helper,event)
+                {
+        			var child = component.find("one");
+        			child.callme("Tushar","jalgaon");
+                }
+        
+        component.find("one"); it jump to here c:childComponentname aura:id="one" with the help of id
+        and then goes to and find out method name like callMe and then pass argument to the method.
+        
+        Note :: calling the child component with aura:id that was declaired in the parent, inside the parent controller
+        		we are passing the data to method name like callme.
+        
+        
+        
+        
+        
+        	
+        
+        
+        
+        
+        
+        
+        
+        	
+	</aura:example>
+</aura:documentation>

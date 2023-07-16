@@ -1,0 +1,20 @@
+<aura:component >
+    <aura:attribute name="principleAmount" type="Decimal" />
+    <aura:attribute name="timePeriod" type="Decimal"  />
+    <aura:attribute name="rateOfInterest" type="Decimal" />
+    <aura:attribute name="result" type="Decimal" />
+    
+    <lightning:card title="Simple Interest" >
+        <aura:set attribute="actions" >
+            <lightning:button label="Calculate" onclick="{!c.callMe}" />
+        </aura:set>
+        
+        <lightning:input label="Enter Principle Amount" value="{!v.principleAmount}" />
+        <lightning:input label="Enter Term" value="{!v.timePeriod}" />
+        <lightning:input label="Enter rate of intrest" value="{!v.rateOfInterest}" />.
+        <lightning:input label="result is" value="{!v.result}" />
+        
+    </lightning:card>
+    
+    
+</aura:component>

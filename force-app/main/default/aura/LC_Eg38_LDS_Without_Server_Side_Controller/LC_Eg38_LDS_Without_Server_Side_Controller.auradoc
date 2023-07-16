@@ -1,0 +1,77 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        ========================
+        
+        	Q. What is LDS?
+        		--> Without writting Any server side controller to access salesforce data is called
+        			lightning data service.
+        	
+        		--> There are two approach
+        
+        			1. Form Based.
+        			2. Programming Based.
+        
+        	LDS Programming_Based_Approach ::
+        	================================
+        
+        		--> Controlling salesforce data using client side controller is called LDS_Programming_approach.
+        		
+        	force:recordData::
+        	==================
+        
+        		A force:recordData component define the parameter for accessing, modifying or creating
+        		a record using Lightning Data Service.
+        
+        		This Component doesn't Support all salesforce standard Objects.e.g the Event and Task
+        		object are not supported.
+        
+        			force:recordData aura:id="recordLoader".
+        				recordId="{!v.recordId}"
+        				fields="Name,Description,Phone,industry"
+        				targetFields="{!v.accountRecord}"
+        				targetError="{!v.recordLoadError}"
+        			
+        	Attribute ::(Required)
+        	============
+			
+				Name			Type		Access		Description
+				-----------------------------------------------------------------        
+        		recordId   		string 		global  	Inherited from force:hasRecordId.	
+        		targetField 	Object		global		A simplified view of the fields in targetRecord to reference record filed in component markup.
+       			targetRecord	Object		global		The provided record.This attribute contain only the fields relevant to the requested layputType / fields Attribute.
+        		body			component[]				Inherited from aura:component.
+        
+        
+            Note ::	Object Api Name	(form base)	=  targetRecord(Programming Based)
+            ===========================================================================
+        
+        
+        	Methods Of Force:data ::
+        	========================
+        		Only four record available.
+        	
+        		1. getNewRecord -create a new Record(Initialization)::
+        		------------------------------------------------------
+        
+        		2. reloadRecord - reRendering.
+        
+        		3. saveRecord - for saving the record.
+        
+        		4. deleteRecord - for delete the record
+        
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+	</aura:example>
+</aura:documentation>

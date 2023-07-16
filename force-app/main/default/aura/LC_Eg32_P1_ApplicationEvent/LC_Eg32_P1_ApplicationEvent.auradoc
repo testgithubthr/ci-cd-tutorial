@@ -1,0 +1,65 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        Application Events:
+        ===================
+        
+        		Application Events follow a traditional publish_Subscribe model. an application event is fired from an
+        		instance of a component . all components that provides a handler for the event are notified.
+        
+        		1. Application event propagation
+        		2. Create Custom Component Events
+        		3. Fire component event
+        		4. Handling Component event.
+        
+        Note :: Component event are the bubbling concept means bottom to top , lower to upper.
+        
+        		Application event are the bubbling(bottom - top), sibbling(Left-right),inheritance(top-bottom).
+        
+        
+       Step_1 :: Create a Event : aura:event type="APPLICATION"
+        
+       Step_2 :: Register the Event : aura:registerEvent name="Sample Application Event" type="c.appEvent"
+        
+       Step_3 :: Fire an Event :  Use $A.get("e.c:myAppEvent") in javaScript to get an instance of the  myAppEvent
+        						  event in the myNameSpace nameSpace.
+        						
+        							var appEvent = $A.get("e.c:appEvent");
+        
+       Step_4 :: Handle the event : aura:handler  event="c:appEvent" action="{!c.handleApplicationEvent}" 
+        
+        
+        
+        Note ::
+        ======
+        
+                v --- Fields / Attribute
+                
+                c --- Custom Component / action / Function
+                
+                e --- Event
+        
+        
+        Execution will be ::
+        
+        		first within component(Family)
+        				
+        					First	--Inheritance(bottom)
+        					Second	--Sibling (Left-Right)
+        					Third	--Bubbling (Top)
+        
+        		Second outside means another component within same application(Cousion)
+        
+        		Third (Application)
+        
+        		
+        						
+        							
+        
+        
+        
+	</aura:example>
+</aura:documentation>

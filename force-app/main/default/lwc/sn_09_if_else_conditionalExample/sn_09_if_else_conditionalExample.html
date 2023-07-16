@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="if_else_condition_example">
+        <lightning-button 
+                            variant="brand"
+                            label={myButton}
+                            onclick={handleClick} >
+        </lightning-button>
+    </lightning-card>
+
+    <template if:true = {cardVisible}>
+        <lightning-card title="if :true /false Demo">
+            {myTitle}
+        </lightning-card>
+    </template>
+</template>

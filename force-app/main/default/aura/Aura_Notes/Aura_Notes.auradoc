@@ -1,0 +1,285 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description
+        
+        Lightning Developement :
+        						Developement in salesforce classified into two categories.
+        						
+        		1. UI (User Interface)
+        	
+        		2. Logic Development
+        
+        UI ::
+        =====
+        
+        	whenever you are login to salesforce you see the screen like account, contact, opportunity etc,
+        	what are these, these are nothing is called UI.
+        	UI through which you interact with salesforce Database, UI through which you can access the customer Data
+        	All these activity is called UI Developement.
+        	Whatever the screen that are able to see in your laptop, mobile, I-Pad thoese are called UI.
+        
+        There are 3 UI Design technique from Salesforce ::
+        ====================================================
+        
+        	1. Salesforce Classic
+        	2. Salesforce Lightning
+        	3. Salesforce LWC (Lightning Web Component)
+        
+        Salesforce Classic :
+        =====================
+        
+        	Whic is nothing But Visualforce Framework.
+        	Classic is based on Visualforce framework.
+        
+        Note ::
+        ======
+        		see the how the classic is, see the lightning is, Same Data But UI is different.
+        		Data has not changed, But appearence of the data has changed.
+        
+        Salesforce Lightning :
+        ======================
+        
+        	Your lightning Developement is based on third party technology called as Aura framework,
+            also called as lightning framework.
+        
+        	We will not be used Salesforce technology for lightning developement, we use Third Party technology is called Aura.
+        	Which is Universal Accepted through which we can easily created sophisticated UI.
+        
+        	Lightning is mixed salesforce technology mixed Aura technology, mix up alot of thing, you can learn so many thing
+        	here, all different technology club togethere to form salesforce technology.
+        
+        	As I told you, this is a framework developement, technology dependent lightning developement is a depend on Aura.
+        	Aura is not a salesforce technology,its a third party vendor technology tomorrow Aura stuck for support, then what will you do, is the question.
+        	if tomorrow aura start charging, its started licence free then salesforce will come in trouble.
+        	Today Aura is free, but tomorrow aura stuck , aura decided we will not extend any more component, then what will you do?
+        	Aura choose market strategy,
+        	Whenever new technology comes in market its give you free free free.
+        	example  :: Gio Netwok, mobile Sim card.
+        	=======================================
+        
+        	right now, Twitter is free, facebook is free, whatsapp is free, Instagram is free free free free.
+        	everybody using it.enjoying it. may be complete people using Aura its start charging per user per month then waht will happen
+        	Aura saying, you need to charge  1rs per user per month.can you imagine salesforce have how many user, they will earning in Billions.
+        	
+        Salesforce LWC :
+        ===============
+        
+        	Hence, Salesforce come with new technology is called LWC (Lightning Wen Component)
+        	LWC is Open Source Framework its totally free.
+        	complete Javscript + HTML Dom framework
+        
+        	HTML + CSS + JavaScript = LWC.
+        
+        	How to build sophisticated screen using Javascript + HTML + CSS is called without using Aura Technology
+      		No framework at all. its Open source technology without using any licence framework is creating such as beautiful 
+        	experience is called LWC.
+        
+        
+        	SFDC Lightning Development   +  SFDC LWC  = Complete Lightning
+        	===============================================================
+        
+        	1. SFDC Classic						: is a visualforce framework
+        	2. SFDC Lightning Development(Aura) : Aura Framework / lightning framework
+        	3. SFDC LWC							: Open source Framework its free 
+        
+        
+        	However your Basic remain same from the server side your apex, Oops, SOQL, classes Trigger,getter, setter, controller,
+        	batch apex your basic remain same.
+        
+        	However, in lightning rather than using apex logic 90% time we will write client side controller.
+        
+        	This apex logic are called as server side controller because run on server.
+        
+        	Whenever we write a class and call a class where is the calculation is happen its happen on salesforce server.
+        
+        Note ::
+        =======
+        
+        	In Visualforce page, the way to calculate length and width, we have to develope the UI and Logic in the server
+        	the page is calling from the server  passing length and width and system is getting the result, the result
+        	again push to back to the page
+        
+        	Class ----------------> Page.
+        
+       		But in Lightning, All calculation happen within the page only, we will not write any apex class.
+        	In other word, It is not only User Interface developement along  with UI Developement.
+        
+        	without write class at server side controller, how to write client side controller behind this alot of programming.
+        	
+        	In visualforce page, you just write design all the logic come from Apex, in visualforce framework most of  logic 90%
+        	com from where  Apex class.
+        
+        	In lightning, all the logic will be on lightning page that makes the page faster.
+        	
+        
+        
+        
+        
+     What is difference between Aura and LWC ?
+	
+		Aura :: Lightning is on Aura framework , The technology is different , its a third party technology is called Aura.
+				Lightning Developement is Aura Framework.
+				Today, Aura framework is Open source Framework, its Free framework.
+				Aura is not a Salesforce Technology, Aura is a Third Party Technology.
+				Salesforce using Aura technology for Lightning Developement.
+				Today's Aura is Free, But Tomorrow nobody knows Aura will start charging or not.
+				Once Project has been develope in Aura and If aura has started to charge what happen with client, what happen with Project.
+				By Looking at the future, Saleforce came up with new technology called as LWC (Lightning Web Component)
+				
+				
+		LWC  :: But where As LWC is an Open Source Framework, no Proprietory.
+		        its totally Java and HTML DOM Completely free, not chargable 
+				
+				
+		
+		Create a Account Lightning Developement ::
+		
+			developer.salesforce.com
+			
+			Lightning Environment setup
+			
+		Stpe_1 ::	Domain(website) Name is Mandate
+		
+		Step_2 ::   namespace is optional
+		
+		
+			Domain Creation ::
+			==================
+			
+				Setup 
+				  |
+				  |=== Setting 
+						|
+						|===Company Setting
+								|
+								|=== My Domain
+										|
+										|=== give proper name
+													|
+													|===check Availability
+															|
+															|=== Register the Domain
+																	|
+																	|=== log in
+																			|
+																			|=== Deploy to User
+																			
+																			
+																			
+			nameSpace :: 
+        
+        =======================================================================================
+        
+        Lightning Component in Visualforce Framework :
+        ==============================================
+        
+        What is purpose of Application?
+        ================================
+        
+        	Application is used for lightning out, what does it mean I want a lightning button to be 
+        	available in framework in visualforce framework.
+        
+        You just create Lightning application eg: LA_Eg1_LightningVFbutton.
+        
+        Below the checkBox is available, name is, Lightning Out Dependency App. is called Lightning Out.
+        										  =============================
+        
+        Then only we can export to a lightning Component in a visualforce page.
+        
+        Whenever you checked check box with lightning out dependency App,
+        
+        your Appliction extends with,
+        
+        aura:application extends="ltng:outApp"
+        =======================================
+        
+        1. Lightning application is used to export cpmponent to visualforce page framework.
+        2. Lightning App should extends to lightning:outApp(ltng:outApp)
+        3. Used aura dependency (aura:dependecy-tag) for the component, what i want to export, i want to export button
+           use resource (resource="lightning:button"), can i export custom component: Yes.
+        
+        
+        Note :: always You can export through application only.
+        ========================================================
+        1_Step :
+        
+        	aura:application extends="ltng:outApp"
+        
+        		aura:dependency resource="lightning:button"
+        
+        	/aura:application
+        
+        
+        Note:: You cannot take componnet directly out, you go through via Application only.
+        
+        2_step :
+        
+        	Now, go to the Visualforce Environment.
+        
+        	In Vf, includeLightning Tag.
+        		   include placeholder
+        
+        This is our complete Structure.
+        ===============================
+        
+        
+        <!--	<apex:page>
+        
+          			<apex:includeLightning />
+        
+						<apex:pageBlock title="Employee Details">
+							<apex:pageblockSection>
+								<apex:pageblockSectionItem>
+        							 <apex:outputLabel value="Enter the Employee name" />
+          								<apex:inputText />
+        						</apex:pageblockSectionItem>
+
+								<apex:pageblockSectionItem>
+        							 <apex:outputLabel value="Enter the Employee City" />
+          								<apex:inputText />
+        						</apex:pageblockSectionItem>
+
+								<apex:pageblockSectionItem>
+        							 <apex:outputLabel value="Enter the Employee Salary" />
+          								<apex:inputText />
+        						</apex:pageblockSectionItem>
+
+       						</apex:pageblockSection>
+
+       						<apex:commandButton value="Submit" />
+
+							 <div id="one"> </div>
+           				</apex:pageBlock>
+
+
+        				<script>
+
+							$Lightning.use("c:lightningApplicationName",function(){
+																					$Lightning.createComponent(
+																												"lightning:button",
+																												 {"label":"submit","variant":"Success"},
+																												  "one",
+																												 function(cmp)
+																												{
+																													alert("Lightning Button created");
+																												}
+																											  )
+																				});
+
+           				</script>
+
+        	</apex:page>	  -->
+        
+        		
+        
+        
+        
+        	
+        	
+        	
+						
+
+	</aura:example>
+</aura:documentation>

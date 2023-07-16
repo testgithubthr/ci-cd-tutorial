@@ -1,0 +1,37 @@
+<aura:component >
+    <lightning:button onclick="{!c.handleShowActiveSectionName}" label="Show Active Section Name" />
+    <lightning:button onclick="{!c.handleSetActiveSectionC}" label="Open Section Name" />
+    
+    <lightning:accordion aura:id="accordion" activeSectionName="B" >
+    	<lightning:accordionSection name="A" label="Accordion Title A">
+            
+        	<aura:set attribute="actions">
+            	<lightning:buttonMenu aura:id="menu" alternativeText="Show Menu" iconSize="x-small" menualignment="right" >
+                    <lightning:menuItem value="New" label="Menu Item One" />
+                    <lightning:menuItem value="Edit" label="menu Item Two" />
+                </lightning:buttonMenu>
+            </aura:set>
+            
+            <aura:set attribute="body">
+            	<p>This is the Content Area for Section A </p>
+                <p>This is Line A One</p>
+                <p>This is Line B Two</p>
+                <p>This is Line C Three</p>
+            </aura:set>
+        </lightning:accordionSection>
+        
+        <lightning:accordionSection name="B" label="Accordion Title B">
+            <p>This is the Content Area for Section B </p>
+                <p>This is Line B One</p>
+                <p>This is Line B Two</p>
+                <p>This is Line B Three</p>
+        </lightning:accordionSection>
+        
+        <lightning:accordionSection name="C" label="Accordion Title C">
+        		<p>This is the Content Area for Section B </p>
+                <p>This is Line C One</p>
+                <p>This is Line C Two</p>
+                <p>This is Line C Three</p>
+        </lightning:accordionSection>
+    </lightning:accordion>
+</aura:component>

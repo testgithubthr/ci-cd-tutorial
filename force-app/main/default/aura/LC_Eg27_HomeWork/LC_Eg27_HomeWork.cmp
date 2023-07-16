@@ -1,0 +1,11 @@
+<aura:component >
+    <lightning:card title="Accounts" iconName="standard:account">
+        <aura:set attribute="actions">
+            <lightning:buttonGroup>
+                <lightning:button label="New " />
+                <lightning:button label="Import" />
+            </lightning:buttonGroup>
+        </aura:set>
+       
+    </lightning:card>
+</aura:component>

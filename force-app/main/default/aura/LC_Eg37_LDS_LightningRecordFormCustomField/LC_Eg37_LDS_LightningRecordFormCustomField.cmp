@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name="myfields" type="string[]" default="['Name','Phone','Industry']" />
+	<lightning:layout>
+    	<lightning:layoutItem size="6">
+        	<lightning:recordForm
+                              recordId="0015g00000ri649AAA"
+                              objectApiName="Account"
+                              fields="{!v.myfields}"
+                              mode="view"
+                              columns="3"
+                                  />                                  	
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

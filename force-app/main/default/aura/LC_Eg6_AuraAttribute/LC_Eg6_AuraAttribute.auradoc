@@ -1,0 +1,56 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description  ::
+        
+        Aura:Attribute ::(something like initialization)
+        
+            Whenever hold the data, its a container
+            Whenever hold any data in lightning we use aura:attribute.
+        
+        Note :: always declair attribute in the starting of the component.
+        		aura:attribute cannot be declair inside a lightning card or anywhere , we got an error.
+        		for all attribute we will use v keyword.
+        		and for all action and calling component use c keyword.
+        		and for all event, calling e keyword.
+        	-- I want to display the information in card, How ?
+        		{!v.empName}
+        		v is a reserve Keywords, every attribute put like these ({!v.empName})
+        		v stand for field , field.value, which field are talking about.
+        		v , c, e there are three reserve keyword
+        		all your attribute and function has to be within {} brace
+        		v stands for attribute.
+        		c is a reserve keyword for a used all component , all custom component and all custom function called.
+        		e used for event
+        
+        Todays we are going to start with component + controller
+        
+        Controller ::
+        
+        	whenever click on this button onClick="{!c.callMe}" in component system will call function is called callMe.
+        	
+        	callMe and clearMe both are function and based on function logic button will work.
+        
+        	How to pass the value from controller to component?
+        	-->   component.set("v.empName","Tushar Rane");
+            -->   component.set("v.age",31);
+      	    -->   component.set("v.Salary",100000);
+        
+        	Note ::   never used ! sign within controller.
+        			  ! this sighn used only within component.
+        		
+        	What is it mean function(component,event,helper) ?
+        --> (component,event,helper (These are called function variable / parameter))
+        --> I dont need event as well as helper variable so we can removed no issue.so this function valid for compnent only.
+        
+        		component --> This function called within the component.
+        		Event     --> This function can be called within the event for java_script to extended to helper.
+        		Helper    --> This function can be called in helper also.
+        
+        Here, we have two function , so we can called to each other.(One function called into another function)
+        
+        
+        
+	</aura:example>
+</aura:documentation>

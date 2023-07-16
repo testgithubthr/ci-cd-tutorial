@@ -1,0 +1,57 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description  ::
+        ======================
+        		
+        	Server Side Controller ::
+        	========================
+        
+        			Step_1 : We write a search method with parameter(string accname,string accind), but problem is that, How to pass Input Parameter to this method.
+        
+        			Step_2 : We write getContact method with parameter(string accId), but problem is that, how to pass accountId to this method.
+        
+        			Step_3 : we write getOpp method with parameter(string accId), but problem is that, how to pass accountId to this method.
+        
+        	Event ::
+        	========
+        
+        		  we create custom event for storing accountId 
+        
+       			 aura:attribute name="accountId" type="String"  (still accountId is blank, we have just declair variable accountId)
+        
+        
+        	Component_c1 ::
+        	===============
+        
+        		Step_1 : Decalir the attribute for storing input data
+        
+        		Step_2 : registerEvent 
+        				 aura:registerEvent name="Give any name for calling" type="c:call event what we have created"
+        
+        		Step_3 : create Input Data field through we will pass the data to attribute.
+        
+        
+        		Controller ::
+        		=============
+        
+        				Step_1 : get component attribute first, var aname = component.get("v.accname");
+        
+        				Step_2 : get component attribute Second, var aind = component.get("v.accind");
+        
+        				step_3 : call apex server-side controller method to pass this input data to search method
+        						
+        						 var action = component.get("c:search");
+        							 action.setParams({"accname":aname,"accind":aind});
+        							 action.setCallback(this,function(response){
+        								
+        				call the event and pass accountId to that event ::
+        												var evt = $A.get("e.c:LE_Eg33_EventApplicationAccConOpp");
+                                                        evt.setParams({"accId":res});
+                                                        evt.fire();
+        							});
+        							
+        				Step_4 : $A.enqueueAction(action);
+	</aura:example>
+</aura:documentation>

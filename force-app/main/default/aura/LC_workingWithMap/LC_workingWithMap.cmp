@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="sectionLabels" type="Map" default="{a:'label1',b:'label2',c:'label3'}" />
+    <lightning:button label="Display label" onclick="{!c.addToMap}" />
+    <aura:iteration items="{!v.sectionLabels}" var="a" >
+    	{!a.value}
+    </aura:iteration>
+</aura:component>

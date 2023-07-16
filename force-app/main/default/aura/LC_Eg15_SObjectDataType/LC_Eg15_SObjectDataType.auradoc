@@ -1,0 +1,46 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        What is a SObject DataType?
+        
+        It is nothing but all object in other words tables that are available inside salesforce, all the default table like
+        Account, contact,Opportunity as well as Custom object.
+        
+        How can we access those standard obj and custom obj?
+        
+        aura:attribute name="acc" type="Account" default="{SObjectType:'Account'}"  Account acc = new Account()
+        
+        default="{SObjectType:'Account'}"/> is equal to  Account acc = new Account()
+        
+        default="{SObjectType:'Account'}"/>  is equal to new Account() 
+        
+        default="{SObjectType:'Account'}"/> means i am initializing this variable is called acc with type Account.
+        
+        default="{SObjectType:'Account'}"/> is required , whenever you want to input the data , then i need this.
+        
+     Note ::   When ever we created a new account and we want to pass the data component to controller,
+       		   default="{SObjectType:'Account'}"/> this line is must, oterwise	it will not work.
+        
+        acc variable is hold the complete Data of account type. through which we can access one by one field.
+        
+        Can i remove this attribute and acheve this ?
+        No. we must have attribute.
+        
+        For SObject attribute is compulsory.
+        
+        Note ::
+        	1. In Salesforce lightning we dont have debuger, system will not tell you which line error is,
+        	   There is no debuger specializing mechanisam available.
+        	   we have interpreter , we dont have compilar, java doesnt have compilar.
+        	   In real time how can we debug?
+             --> console.log("account name entered"+acc.Name);
+        
+        Can i use more than SObject DataType?
+        Yes....
+        
+        
+	</aura:example>
+</aura:documentation>

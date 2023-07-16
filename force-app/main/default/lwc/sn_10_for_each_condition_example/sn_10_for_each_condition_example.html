@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="For_Each_Loop_Example">
+        <template if:true={conList.data}>
+            <template for:each={conList.data} for:item="con">
+                <h3 key = {con.id}>con.name</h3>
+            </template>
+        </template>
+
+        <template if:true={conlist.error}>
+            {conlist.error}
+        </template>
+    </lightning-card>
+</template>

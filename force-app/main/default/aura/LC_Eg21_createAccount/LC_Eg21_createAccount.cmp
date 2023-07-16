@@ -1,0 +1,37 @@
+<aura:component controller="AC_Eg21_createAccount">
+    
+    <aura:attribute name="name" type="string"/>
+    <aura:attribute name="rating" type="string"/>
+    <aura:attribute name="phone" type="string"/>
+    <aura:attribute name="industry" type="string"/>
+    <aura:attribute name="result" type="string"/>
+    <aura:attribute name="flag" type="Boolean" default="false"/>
+    
+    <lightning:card title="Account Creation">
+        <aura:set attribute="actions">
+        	
+                <lightning:button label="Create Acc" onclick="{!c.callme}"/>
+                <lightning:button label="clear" onclick="{!c.clearMe}"/>
+            
+        </aura:set>
+    	<lightning:layout>
+        	<lightning:layoutItem size="6" padding="around-small">
+                <lightning:input label="Enter the Name" value="{!v.name}"/>
+                <lightning:input label="Enter the rating" value="{!v.rating}"/>
+                <lightning:input label="Enter the phone" value="{!v.phone}"/>
+                <lightning:input label="Enter the industry" value="{!v.industry}"/>
+            </lightning:layoutItem>
+            
+            <aura:if isTrue="{!v.flag}">
+            	<lightning:layoutItem size="6" padding="around-small">
+                	Account Name	:{!v.name} <p></p>
+                    Account Rating  :{!v.rating}<p></p>
+                    Account Phone   :{!v.phone}<p></p>
+                    Account Industry:{!v.industry}<p></p>
+                    Result			:{!v.result}<p></p>
+                </lightning:layoutItem>
+            </aura:if>
+        </lightning:layout>
+    </lightning:card>
+	
+</aura:component>

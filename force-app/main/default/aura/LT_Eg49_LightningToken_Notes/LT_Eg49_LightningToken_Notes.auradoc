@@ -1,0 +1,45 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description
+        ===================
+        
+        	Lightning Token ::
+        	==================
+        		
+        		collection  of custom CSS style apply across the component is called Lightning Token.
+        		
+        		Lightning Token are also called as Design Tokens.
+        		
+        		Lightning or Design Token are collection of CSS Styles.
+        
+        		Lightning Token Consists of Token Bundle.
+        
+        		The default Token Bundled Name should be defaultTokens.tokens
+        
+        		To create Token collection we use aura Token.
+        
+        	Design Tokens :
+        	===============
+        
+        		Design Tokens are visual design "atoms" for a building a design for your component or app.
+        		
+        		Define token value once and reuse them throughout your lightning component CSS resource.
+        		Tokens make it easy to ensure that your design is consistent and even easier to update it
+        		as your design evolves.
+        	
+        	Tokens Bundles::
+        	================
+        
+        		Tokens are a type of bundle, just like a components, events and interfaces.
+        
+        		A Token Bundle contains only one resource, a token collection definition.
+        
+        		Token collection starts with aura:Token tag.It can only contain aura:token.
+        
+        		Every Token Has SubToken or Bundle.
+        		
+        	
+	</aura:example>
+</aura:documentation>

@@ -1,0 +1,49 @@
+<aura:component >
+    
+    <aura:attribute name="activeSections" type="list" default="['A','C']" />
+    <aura:attribute name="activeSectionsMessage" type="String" default="" />
+    
+    <p>{! v.activeSectionsMessage}</p>
+    
+    
+    <lightning:accordion
+        allowMultipleSectionsOpen="true"
+        onsectiontoggle="{! c.handleSectionToggle }"
+        activeSectionName="{! v.activeSections }"
+    >
+        
+        <lightning:accordionSection name="A" label="Accordion Title A">
+            <aura:set attribute="actions">
+                <div height="100%" width="100%">
+                    <lightning:buttonMenu aura:id="menu" iconSize="x-small" menuAlignment="right">
+                        <lightning:menuItem value="New" label="Menu Item One" />
+                        <lightning:menuItem value="Edit" label="Menu Item Two" />
+                    </lightning:buttonMenu>
+                </div>
+            </aura:set>
+            
+            <aura:set attribute="body">
+                <p>This is A One</p>
+                <p>This is A Two</p>
+                <p>This is A Three</p>
+            </aura:set>
+        </lightning:accordionSection>
+        
+        <lightning:accordionSection name="B" label="Accordion Title B">
+            <p>This is B One</p>
+            <p>This is B Two</p>
+            <p>This is B Three</p>
+            
+        </lightning:accordionSection>
+        
+        <lightning:accordionSection name="C" label="Accordion Title C">
+            <p>This is C One</p>
+            <p>This is C Two</p>
+            <p>This is C Three</p>
+            
+        </lightning:accordionSection>
+        
+        
+        
+    </lightning:accordion>
+</aura:component>

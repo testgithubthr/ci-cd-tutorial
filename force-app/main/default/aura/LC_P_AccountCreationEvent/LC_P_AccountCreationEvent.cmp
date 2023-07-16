@@ -1,0 +1,16 @@
+<aura:component controller="AC_LE_createRetrieveAccount">
+    <aura:attribute name="accounts" type="list" default="[]" />
+    <aura:attribute name="acolumns" type="list" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.callMe}" />
+    <aura:handler name="nickName" event="c:LE_AccountCreationEvent" action="{!c.showMe}"/>
+    
+    <div class="Box">
+        <c:LC_C_AccountCreationEvent />
+    </div>
+    
+    <br/><br/><br/><br/><br/>
+    
+    <lightning:dataTable keyField="id" data="{!v.accounts}" columns="{!v.acolumns}" />
+	
+</aura:component>

@@ -1,0 +1,50 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description ::
+        
+        Here,
+        I want to display contact page-form on Account Record page.
+        But, here we are not linking Account - contact relation, just created contact form.
+        here, There is bug while linking Account with Contact.
+        
+        	aura:attribute name="con" type="object" 
+    		aura:attribute name="newCon" type="object" 
+        
+        	Note : As the page load I want to initializa the memory
+        	======
+        
+        	
+        
+        newCon ::use for initialization, means when we entering the data into field,
+        		 before saving data into the database, i want to display on page that's the purpose.
+        con :: after saved data into the database, only that data stored in con.
+        
+        recordId="{!v.recordId}" here It will take account recordId, that's why it gives error.
+        
+        Important command for SLDS function ::
+        ======================================
+        
+        	saveRecord ::
+        	=============
+        
+        		component.find("rec").saveRecord(function(response){});
+        
+        	NewRecord ::
+        	=============
+        
+        		component.find("rec").getNewRecord("contact",Null,false,$A.getCallBack(){})
+
+			DeleteRecord::
+			===============
+
+				component.find("rec").deleteRecord("$A.getCallback(function(response){})"); 
+        
+        	reLoadRecord ::
+        	===============
+        
+        		
+        
+	</aura:example>
+</aura:documentation>

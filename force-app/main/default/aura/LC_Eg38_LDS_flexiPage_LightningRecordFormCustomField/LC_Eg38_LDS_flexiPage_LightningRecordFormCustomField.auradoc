@@ -1,0 +1,20 @@
+<aura:documentation>
+	<aura:description>Documentation</aura:description>
+	<aura:example name="ExampleName" ref="exampleComponentName" label="Label">
+        
+		Example Description :
+        
+        	flexiPage : 
+        	===========
+        
+        		we can get recordId automatically from the recordPage.
+        
+        		flexipage has :: force:"hasRecordId" we will get recordId through force:"hasRecordId"
+				
+        		with the help of force:hasRecordId system will get the recordId automatically.
+        
+        		Without declairing the attribute  : recordId = "{!v.recordId}" this recordId comes from hasRecordId its a dynamically nature.
+        
+        		we will get dynamic recordId only through the flexipage.
+    </aura:example>
+</aura:documentation>

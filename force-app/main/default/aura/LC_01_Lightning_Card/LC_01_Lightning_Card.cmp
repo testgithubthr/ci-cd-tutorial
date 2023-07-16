@@ -1,0 +1,7 @@
+<aura:component >
+	<lighting:card iconName="standard:account">
+    	<aura:set>
+        
+        </aura:set>
+    </lighting:card>
+</aura:component>
